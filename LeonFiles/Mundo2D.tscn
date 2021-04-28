@@ -1,0 +1,35 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://LeonFiles/Player.tscn" type="PackedScene" id=1]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 321.345, 10 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 10, 181.171 )
+
+[node name="Mundo2D" type="Node2D"]
+
+[node name="PlayerBody2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( 100.113, 84.7624 )
+cadence = 0.2
+
+[node name="Collisions" type="Node2D" parent="."]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Collisions"]
+
+[node name="TopColl" type="CollisionShape2D" parent="Collisions/StaticBody2D"]
+position = Vector2( 320, 1.587 )
+shape = SubResource( 1 )
+
+[node name="DownColl" type="CollisionShape2D" parent="Collisions/StaticBody2D"]
+position = Vector2( 320, 360 )
+shape = SubResource( 1 )
+
+[node name="RightColl" type="CollisionShape2D" parent="Collisions/StaticBody2D"]
+position = Vector2( 640, 180 )
+shape = SubResource( 2 )
+
+[node name="LeftColl" type="CollisionShape2D" parent="Collisions/StaticBody2D"]
+position = Vector2( 0, 180 )
+shape = SubResource( 2 )
