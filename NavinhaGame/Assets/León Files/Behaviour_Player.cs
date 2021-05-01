@@ -8,24 +8,29 @@ public class Behaviour_Player : MonoBehaviour
     public float speed;
     public float xMax, xMin, yMax, yMin;
     private Rigidbody2D rbody;
-    public Transform spawner;
+    public Transform gun;
 
     void Start()
     {
         rbody = GetComponent<Rigidbody2D>();
     }
 
+    void Spawner()
+    {
+        //Instantiate
+        GameObject bullet = BulletPoolSystem.objInstance.GetObjFromPool();
+        if (bullet != null)
+        {
+            bullet.transform.position = gun.position;
+            bullet.SetActive(true);
+        }
+    }
+
     void ShootBullet()
     {
-        if (Input.GetKey(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Return))
         {
-            //Instantiate
-            GameObject bullet = BulletPoolSystem.objInstance.GetObjFromPool();
-            if( bullet != null)
-            {
-                bullet.transform.position = spawner.transform.position;
-                bullet.SetActive(true);
-            }
+            Spawner();
         }
     }
 
@@ -35,7 +40,7 @@ public class Behaviour_Player : MonoBehaviour
         float moveX = Input.GetAxisRaw("Horizontal");
         float moveY = Input.GetAxisRaw("Vertical");
 
-        Vector2 movement = new Vector2 (moveX,moveY).normalized;
+        Vector2 movement = new Vector2(moveX, moveY).normalized;
 
         rbody.velocity = movement * speed;
 

@@ -10,10 +10,9 @@ public class BulletPoolSystem : MonoBehaviour
     List<GameObject> listOfObjs = new List<GameObject>();
     public int poolsize;
     
-
     private void Awake()
     {
-        if(objInstance = null)
+        if(objInstance == null)
         {
             objInstance = this;
         }
@@ -33,7 +32,7 @@ public class BulletPoolSystem : MonoBehaviour
     {
         for (int i = 0; i < listOfObjs.Count; i++)
         {
-            if (!listOfObjs[1].activeInHierarchy)
+            if (!listOfObjs[i].activeInHierarchy)
             {
                 return listOfObjs[i];
             }
