@@ -15,5 +15,5 @@ MonoBehaviour:
   PrefabPools:
   - Prefab: {fileID: 8299507966065128056, guid: 7cccbbe16305ebf4189364c3f1556ffc, type: 3}
     Tag: PlayerBullet
-    PrewarmQuantity: 500
+    PrewarmQuantity: 10
     Prewarm: 1
