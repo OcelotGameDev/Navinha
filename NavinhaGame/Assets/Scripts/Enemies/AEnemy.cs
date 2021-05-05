@@ -10,7 +10,7 @@ public abstract class AEnemy : MonoBehaviour, IHittable
     
     [SerializeField] protected Rigidbody2D _rigidbody;
 
-    protected void OnEnable()
+    protected virtual void OnEnable()
     {
         _currentLifePoints = _maxLifePoints;
     }

@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Behaviour_Player : MonoBehaviour
+public class Behaviour_Player : MonoBehaviour, IHittable
 {
     public float speed;
     public float xMax, xMin, yMax, yMin;
@@ -45,5 +45,9 @@ public class Behaviour_Player : MonoBehaviour
         rbody.position = new Vector2(Mathf.Clamp(rbody.position.x, xMin, xMax), Mathf.Clamp(rbody.position.y, yMin, yMax));
 
         ShootBullet();
+    }
+    
+    public void Hit(int damage = 1)
+    {
     }
 }
