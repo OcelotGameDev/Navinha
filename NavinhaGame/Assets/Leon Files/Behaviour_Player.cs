@@ -2,7 +2,6 @@ using UnityEngine;
 
 public class Behaviour_Player : MonoBehaviour
 {
-
     public float speed;
     public float xMax, xMin, yMax, yMin;
     private Rigidbody2D rbody;
@@ -16,7 +15,8 @@ public class Behaviour_Player : MonoBehaviour
     void Spawner()
     {
         //Instantiate
-        GameObject bullet = BulletPoolSystem.objInstance.GetObjFromPool();
+        GameObject bullet = PoolingSystem.Instance.SpawnObject("PlayerBullet");
+
         if (bullet != null)
         {
             bullet.transform.position = gun.position;

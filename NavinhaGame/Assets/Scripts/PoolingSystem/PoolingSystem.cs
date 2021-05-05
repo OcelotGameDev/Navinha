@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
+using UnityEngine.ResourceManagement.AsyncOperations;
 
 public class PoolingSystem : MonoBehaviour
 {
@@ -24,7 +25,7 @@ public class PoolingSystem : MonoBehaviour
     private IEnumerator Start()
     {
         var operation = Addressables.LoadAssetAsync<PoolPrefabScriptableObject>("PoolList");
-
+        
         while (!operation.IsDone)
         {
             yield return null;
@@ -37,7 +38,7 @@ public class PoolingSystem : MonoBehaviour
             SetupPools(poolList.PrefabPools);
         }
     }
-
+    
     private void SetupPools(PrefabPool[] prefabPools)
     {
         _poolsDictionary = new Dictionary<string, Pool>();
