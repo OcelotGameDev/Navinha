@@ -1,8 +1,9 @@
 using UnityEngine;
 
-public class Behaviour_Player : MonoBehaviour, IHittable
+public class Behaviour_Player : MonoBehaviour, IHittable, IHealth
 {
-    public int currentHp, maxHp;
+    public int maxHp;
+    int currentHp;
     public float speed, xMax, xMin, yMax, yMin;
     private Rigidbody2D rbody;
     private bool IsDead => currentHp <= 0;
@@ -31,11 +32,22 @@ public class Behaviour_Player : MonoBehaviour, IHittable
         }
     }
 
+    public void Heal(int heal = 1)
+    {
+        currentHp += heal;
+    }
+
     public void Hit(int damage = 1)
     {
         currentHp -= damage;
 
         if (IsDead) Die();
+
+
+    }
+    void OnTriggerEnter2D()
+    {
+
     }
 
     private void Die()
