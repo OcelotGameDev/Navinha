@@ -21,3 +21,7 @@ MonoBehaviour:
     Tag: EnemyBulllet
     PrewarmQuantity: 10
     Prewarm: 1
+  - Prefab: {fileID: 2659576121099143042, guid: ad95f21f4dd9d764f95d94918c757d17, type: 3}
+    Tag: BasicEnemy
+    PrewarmQuantity: 10
+    Prewarm: 1

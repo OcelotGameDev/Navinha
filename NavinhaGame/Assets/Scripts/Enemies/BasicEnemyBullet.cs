@@ -2,7 +2,7 @@ using System;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D))]
-public class BasicEnemyBullet : MonoBehaviour, IHittable
+public class BasicEnemyBullet : MonoBehaviour
 {
     [SerializeField] private float _speed = 5;
     
@@ -18,10 +18,7 @@ public class BasicEnemyBullet : MonoBehaviour, IHittable
         var hittable = other.gameObject.GetComponent<IHittable>();
         
         hittable?.Hit();
-    }
-    
-    public void Hit(int damage = 1)
-    {
+        
         this.gameObject.SetActive(false);
     }
 

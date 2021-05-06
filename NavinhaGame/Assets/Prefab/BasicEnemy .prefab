@@ -48,7 +48,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _maxLifePoints: 3
   _rigidbody: {fileID: 2659576121099143045}
-  _moveSpeed: 0
+  _moveSpeed: 2
   _timeBetweenShots: 1
 --- !u!50 &2659576121099143045
 Rigidbody2D:

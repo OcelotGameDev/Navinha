@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
-using UnityEngine.ResourceManagement.AsyncOperations;
 
 public class PoolingSystem : MonoBehaviour
 {
@@ -54,6 +53,7 @@ public class PoolingSystem : MonoBehaviour
 
     public GameObject SpawnObject(string tag)
     {
+        if (_poolsDictionary == null) return null;
         if (!_poolsDictionary.ContainsKey(tag)) return null;
 
         return _poolsDictionary[tag].GetObject();
@@ -61,6 +61,7 @@ public class PoolingSystem : MonoBehaviour
 
     public GameObject SpawnObject(string tag, Vector3 position, Quaternion rotation)
     {
+        if (_poolsDictionary == null) return null;
         if (!_poolsDictionary.ContainsKey(tag)) return null;
 
         var obj = _poolsDictionary[tag].GetObject();
