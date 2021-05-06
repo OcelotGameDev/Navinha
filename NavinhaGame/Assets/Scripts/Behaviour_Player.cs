@@ -1,17 +1,25 @@
 using UnityEngine;
 
-public class Behaviour_Player : MonoBehaviour, IHittable
+public class Behaviour_Player : MonoBehaviour, IHittable, IHealth
 {
-    public float speed;
-    public float xMax, xMin, yMax, yMin;
+    public int maxHp;
+    int currentHp;
+    public float speed, xMax, xMin, yMax, yMin;
     private Rigidbody2D rbody;
+    private bool IsDead => currentHp <= 0;
     public Transform gun;
 
+    
     void Start()
     {
         rbody = GetComponent<Rigidbody2D>();
     }
-
+    
+    void OnEnable()
+    {
+        currentHp = maxHp;
+    }
+    
     void Spawner()
     {
         //Instantiate
@@ -22,6 +30,29 @@ public class Behaviour_Player : MonoBehaviour, IHittable
             bullet.transform.position = gun.position;
             bullet.SetActive(true);
         }
+    }
+
+    public void Heal(int heal = 1)
+    {
+        currentHp += heal;
+    }
+
+    public void Hit(int damage = 1)
+    {
+        currentHp -= damage;
+
+        if (IsDead) Die();
+
+
+    }
+    void OnTriggerEnter2D()
+    {
+
+    }
+
+    private void Die()
+    {
+        this.gameObject.SetActive(false);
     }
 
     void ShootBullet()
@@ -45,9 +76,5 @@ public class Behaviour_Player : MonoBehaviour, IHittable
         rbody.position = new Vector2(Mathf.Clamp(rbody.position.x, xMin, xMax), Mathf.Clamp(rbody.position.y, yMin, yMax));
 
         ShootBullet();
-    }
-    
-    public void Hit(int damage = 1)
-    {
     }
 }
