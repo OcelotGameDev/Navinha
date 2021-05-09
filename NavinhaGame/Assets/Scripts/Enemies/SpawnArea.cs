@@ -32,15 +32,6 @@ public class SpawnArea : MonoBehaviour
             Vector2.SignedAngle(aux.right, aux.TransformDirection(_direction)));
     }
 
-    private void Update()
-    {
-        var aux = this.transform;
-        _currentStart = aux.TransformPoint(_start);
-        _currentEnd = aux.TransformPoint(_end);
-        _currentRotation = aux.rotation * Quaternion.Euler(0, 0,
-            Vector2.SignedAngle(aux.right, aux.TransformDirection(_direction)));
-    }
-
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.green;
@@ -54,11 +45,6 @@ public class SpawnArea : MonoBehaviour
         {
             Handles.ArrowHandleCap(0, Vector3.Lerp(this.transform.TransformPoint(_start), this.transform.TransformPoint(_end), (float) (i)/ (float)(arrowCount)), this.transform.rotation * Quaternion.LookRotation(_direction), 1, EventType.Repaint);
         }
-        
-        // for (int i = 0; i <= arrowCount; i++)
-        // {
-        //     Handles.ArrowHandleCap(0, Vector3.Lerp(this.transform.TransformPoint(_start), this.transform.TransformPoint(_end), (float) (i)/ (float)(arrowCount)), this.Rotation, 1, EventType.Repaint);
-        // }
         
         Handles.color = Color.white;
     }
