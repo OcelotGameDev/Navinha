@@ -128,7 +128,7 @@ public class Play : IState
     public void OnEnter()
     {
         Time.timeScale = 1f;
-        //FadeInOutSceneTransition.Instance.FadeOut();
+        FadeInOutSceneTransition.Instance.FadeOut();
     }
 
     public void OnExit()
@@ -145,19 +145,21 @@ public class LoadLevel : IState
 
     public void Tick()
     {
-        if (FadeInOutSceneTransition.Instance.FadeInCompleted)
-            _operations.ForEach(t => t.allowSceneActivation = true);
+        // if (FadeInOutSceneTransition.Instance.FadeInCompleted)
+        //     _operations.ForEach(t => t.allowSceneActivation = true);
     }
 
     public void OnEnter()
     {
-        FadeInOutSceneTransition.Instance.FadeIn();
-        
-        _operations.Add(SceneManager.LoadSceneAsync(LevelToLoad));
+        SceneManager.LoadScene(LevelToLoad);
+
+        // FadeInOutSceneTransition.Instance.FadeIn();
+
+        // _operations.Add(SceneManager.LoadSceneAsync(LevelToLoad));
         //_operations.Add(SceneManager.LoadSceneAsync("UI", LoadSceneMode.Additive));
         //_operations.Add(SceneManager.LoadSceneAsync("MapSetup", LoadSceneMode.Additive));
 
-        _operations.ForEach(t => t.allowSceneActivation = false);
+        // _operations.ForEach(t => t.allowSceneActivation = false);
     }
 
     public void OnExit()

@@ -7,7 +7,7 @@ public static class Bootstrapper
     public static void Setup()
     {
         SetupPoolingSystem();
-        SetupGameStateMachine();
+        //SetupGameStateMachine();
     }
 
     private static void SetupPoolingSystem()
