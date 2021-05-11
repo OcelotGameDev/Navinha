@@ -26,9 +26,12 @@
   <component name="IdeDocumentHistory">
     <changedPaths>
       <option value="$PROJECT_DIR$/Assets/Scripts/Interfaces/IHittable.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/SmallEnemy.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Bootstrapper.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/SmallEnemy.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/AEnemy.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/BulletBaseBehaviour.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/BasicEnemyBullet.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1sMfC8ezM1GDJgkXlIqtOMkTHcQ" />
@@ -79,7 +82,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1620687250758</updated>
-      <workItem from="1620687259942" duration="1658000" />
+      <workItem from="1620687259942" duration="7841000" />
     </task>
     <servers />
   </component>

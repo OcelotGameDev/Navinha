@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class BulletBaseBehaviour : MonoBehaviour
@@ -26,5 +24,10 @@ public class BulletBaseBehaviour : MonoBehaviour
         {
             gameObject.SetActive(false);
         }
+    }
+
+    private void OnBecameInvisible()
+    {
+        this.gameObject.SetActive(false);
     }
 }
