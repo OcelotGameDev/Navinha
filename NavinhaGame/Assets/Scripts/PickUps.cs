@@ -2,16 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PickUps : MonoBehaviour
+public enum BulletType
 {
-    void OnTriggerEnter2D(Collider2D col)
-    {
-        var heal = col.gameObject.GetComponent<IHealth>();
-        heal?.Heal();
+    bullet1,
+    bullet2,
+    bullet3,
+}
 
-        //armor
-
-        // bullet type
-
-    }
+[RequireComponent (typeof (Rigidbody2D))]
+public abstract class PickUps : MonoBehaviour
+{
+    public abstract void PickUp(Behaviour_Player player);
 }

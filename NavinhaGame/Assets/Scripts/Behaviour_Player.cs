@@ -1,14 +1,14 @@
 using UnityEngine;
 
-public class Behaviour_Player : MonoBehaviour, IHittable, IHealth
+public class Behaviour_Player : MonoBehaviour, IHittable
 {
-    public int maxHp;
-    int currentHp;
+    public int maxHp, currentHp, armor;
+    public BulletType bulletindex;
+    public string currentBullet = "PlayerBullet";
     public float speed, xMax, xMin, yMax, yMin;
     private Rigidbody2D rbody;
     private bool IsDead => currentHp <= 0;
     public Transform gun;
-
     
     void Start()
     {
@@ -20,10 +20,28 @@ public class Behaviour_Player : MonoBehaviour, IHittable, IHealth
         currentHp = maxHp;
     }
     
+    public void ChangeBullet(BulletType type)
+    {
+        switch (type)
+        {
+            case BulletType.bullet1:
+                currentBullet = "";
+                break;
+            case BulletType.bullet2:
+                currentBullet = "";
+                break;
+            case BulletType.bullet3:
+                currentBullet = "";
+                break;
+            default:
+                break;
+        }
+    }    
+
     void Spawner()
     {
         //Instantiate
-        GameObject bullet = PoolingSystem.Instance.SpawnObject("PlayerBullet");
+        GameObject bullet = PoolingSystem.Instance.SpawnObject(currentBullet);
 
         if (bullet != null)
         {
@@ -32,9 +50,9 @@ public class Behaviour_Player : MonoBehaviour, IHittable, IHealth
         }
     }
 
-    public void Heal(int heal = 1)
+    void OnTriggerEnter2D(Collider2D col)
     {
-        currentHp += heal;
+        col.gameObject.GetComponent<PickUps>()?.PickUp(this);
     }
 
     public void Hit(int damage = 1)
@@ -42,12 +60,6 @@ public class Behaviour_Player : MonoBehaviour, IHittable, IHealth
         currentHp -= damage;
 
         if (IsDead) Die();
-
-
-    }
-    void OnTriggerEnter2D()
-    {
-
     }
 
     private void Die()
