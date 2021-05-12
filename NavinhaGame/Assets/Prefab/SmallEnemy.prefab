@@ -212,7 +212,7 @@ GameObject:
   - component: {fileID: 2002778659371643335}
   - component: {fileID: 2002778659371643329}
   - component: {fileID: 2002778659371643334}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SmallEnemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -267,7 +267,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44bbf89f891c7ee4b9d3d8de3e178d0d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _maxLifePoints: 3
+  _maxLifePoints: 2
   _rigidbody: {fileID: 2002778659371643329}
   _invisibleSignal: {fileID: 2002778657900530241}
   _movingDistance: 5

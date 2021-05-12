@@ -32,6 +32,6 @@ public class BasicEnemy : AEnemy
 
     private void Shoot()
     {
-        var bullet = PoolingSystem.Instance.SpawnObject("EnemyBulllet", this.transform);
+        PoolingSystem.Instance.SpawnObject("EnemyBullet", this.transform);
     }
 }
