@@ -24,6 +24,8 @@ public class GameManager : MonoBehaviour
         _instance = this;
         DontDestroyOnLoad(gameObject);
 
+        FadeInOutSceneTransition.LoadFadeScene();
+        
         _stateMachine = new StateMachine();
         _stateMachine.OnStateChanged += state => OnGameStateChanged?.Invoke(state);
 
@@ -35,18 +37,7 @@ public class GameManager : MonoBehaviour
         Quit quit = new Quit();
         WinState win = new WinState();
 
-    #if UNITY_EDITOR
-        if (!_testingOptions)
-        {
-            _stateMachine.SetState(menu);
-        }
-        else
-        {
-            _stateMachine.SetState(play);
-        }
-    #else
         _stateMachine.SetState(menu);
-    #endif
 
         _stateMachine.AddTransition(menu, loading, () => LoadLevel.LevelToLoad != null);
 
@@ -65,8 +56,8 @@ public class GameManager : MonoBehaviour
         // _stateMachine.AddTransition(options, pause,
         //     () => RewiredPlayerInput.Instance.PausePressed && _stateMachine.LastState is Pause);
 
-        // _stateMachine.AddTransition(menu, options, () => OptionsButton.Pressed);
-        // _stateMachine.AddTransition(options, menu, () => OptionsButton.Pressed && _stateMachine.LastState is Menu);
+        _stateMachine.AddTransition(menu, options, () => OptionsButton.Pressed);
+        _stateMachine.AddTransition(options, menu, () => OptionsButton.Pressed && _stateMachine.LastState is Menu);
         // _stateMachine.AddTransition(options, menu,
         //     () => RewiredPlayerInput.Instance.PausePressed && _stateMachine.LastState is Menu);
 
@@ -94,6 +85,17 @@ public class Menu : IState
     {
         Time.timeScale = 1f;
         LoadLevel.LevelToLoad = null;
+        
+        // If any of the loaded scenes is the menu Scene don't load it again
+        for (int i = 0; i < SceneManager.sceneCount; i++)
+        {
+            if (SceneManager.GetSceneAt(i).name == "Menu")
+            {
+                return;
+            }
+        }
+        
+        // otherwise load it
         SceneManager.LoadSceneAsync("Menu");
     }
 
@@ -145,21 +147,19 @@ public class LoadLevel : IState
 
     public void Tick()
     {
-        // if (FadeInOutSceneTransition.Instance.FadeInCompleted)
-        //     _operations.ForEach(t => t.allowSceneActivation = true);
+        if (FadeInOutSceneTransition.Instance.FadeInCompleted)
+            _operations.ForEach(t => t.allowSceneActivation = true);
     }
 
     public void OnEnter()
     {
-        SceneManager.LoadScene(LevelToLoad);
+         FadeInOutSceneTransition.Instance.FadeIn();
 
-        // FadeInOutSceneTransition.Instance.FadeIn();
+         _operations.Add(SceneManager.LoadSceneAsync(LevelToLoad));
+         // _operations.Add(SceneManager.LoadSceneAsync("UI", LoadSceneMode.Additive));
+         // _operations.Add(SceneManager.LoadSceneAsync("MapSetup", LoadSceneMode.Additive));
 
-        // _operations.Add(SceneManager.LoadSceneAsync(LevelToLoad));
-        //_operations.Add(SceneManager.LoadSceneAsync("UI", LoadSceneMode.Additive));
-        //_operations.Add(SceneManager.LoadSceneAsync("MapSetup", LoadSceneMode.Additive));
-
-        // _operations.ForEach(t => t.allowSceneActivation = false);
+         _operations.ForEach(t => t.allowSceneActivation = false);
     }
 
     public void OnExit()
