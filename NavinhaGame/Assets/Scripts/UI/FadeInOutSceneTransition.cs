@@ -1,4 +1,5 @@
 ﻿using DG.Tweening;
+using TMPro;
 using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.SceneManagement;
@@ -38,11 +39,6 @@ public class FadeInOutSceneTransition : MonoBehaviour
         FadeAnimation.onComplete += () => FadeInCompleted = true;
     }
 
-    private void OnValidate()
-    {
-        if (_volume == null) _volume = GetComponent<Volume>();
-    }
-
     public static void LoadFadeScene()
     {
         SceneManager.LoadSceneAsync("FadeInOutScene", LoadSceneMode.Additive);
@@ -57,5 +53,12 @@ public class FadeInOutSceneTransition : MonoBehaviour
     public void FadeOut()
     {
         FadeAnimation.SmoothRewind();
+    }
+
+    private void OnValidate()
+    {
+        if (_volume == null) _volume = GetComponent<Volume>();
+        
+        if (_panel == null) _panel = GetComponentInChildren<Image>();
     }
 }

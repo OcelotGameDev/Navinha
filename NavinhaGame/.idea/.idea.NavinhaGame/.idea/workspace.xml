@@ -1,8 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="1cc1d91b-c635-45bb-bd14-a11d2b45e00b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.NavinhaGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.NavinhaGame/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/BasicEnemy .prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/BasicEnemy .prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/EnemyBullet.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/EnemyBullet.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/SmallEnemy.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/SmallEnemy.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/TepeTests.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/TepeTests.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/PoolList.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/PoolList.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemies/AEnemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemies/AEnemy.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemies/BasicEnemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemies/BasicEnemy.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,17 +31,28 @@
     </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.addressables@1.16.19/Runtime/ResourceManager/Util/DelayedActionManager.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/OptionsButton.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemies/LargeEnemy.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemies/SmallEnemy.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
       <option value="$PROJECT_DIR$/Assets/Scripts/Interfaces/IHittable.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Bootstrapper.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/SmallEnemy.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/AEnemy.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/BulletBaseBehaviour.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/BasicEnemyBullet.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/FadeInOutSceneTransition.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Bootstrapper.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/UI/OptionsButton.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/UI/OptionsPanel.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/UI/AbstractPanel.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/UI/MainMenuPanel.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/UI/PausePanel.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/BasicEnemy.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/LargeEnemy.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/AEnemy.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1sMfC8ezM1GDJgkXlIqtOMkTHcQ" />
@@ -83,6 +104,8 @@
       <option name="presentableId" value="Default" />
       <updated>1620687250758</updated>
       <workItem from="1620687259942" duration="7841000" />
+      <workItem from="1620772037135" duration="5835000" />
+      <workItem from="1620837134645" duration="2034000" />
     </task>
     <servers />
   </component>
@@ -91,6 +114,18 @@
   </component>
   <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="EditMode" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>

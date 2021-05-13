@@ -1,5 +1,4 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D))]
 public abstract class AEnemy : MonoBehaviour, IHittable
@@ -51,8 +50,10 @@ public abstract class AEnemy : MonoBehaviour, IHittable
 
     protected virtual void OnValidate()
     {
-        if (!_rigidbody) _rigidbody = this.GetComponent<Rigidbody2D>();
+        this.gameObject.layer = LayerMask.NameToLayer("Enemies") ;
         
+        if (!_rigidbody) _rigidbody = this.GetComponent<Rigidbody2D>();
+
         if (_invisibleSignal) return;
         _invisibleSignal = this.GetComponentInChildren<OnBecomeInvisibleSignal>();
 
