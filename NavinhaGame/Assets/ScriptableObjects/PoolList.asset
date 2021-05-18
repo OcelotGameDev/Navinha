@@ -33,3 +33,7 @@ MonoBehaviour:
     Tag: LargeEnemy
     PrewarmQuantity: 10
     Prewarm: 1
+  - Prefab: {fileID: 5452004011856701885, guid: 5ca810a0cc44e0a479fbde00c53f9f4e, type: 3}
+    Tag: BossBullet
+    PrewarmQuantity: 10
+    Prewarm: 1

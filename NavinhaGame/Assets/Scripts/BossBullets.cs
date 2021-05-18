@@ -1,8 +1,11 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
-public class BulletBaseBehaviour : MonoBehaviour
+public class BossBullets : MonoBehaviour
 {
     public float speed;
+    public Transform gun;
     Rigidbody2D rbody;
 
     private void Start()
@@ -12,7 +15,7 @@ public class BulletBaseBehaviour : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        rbody.velocity = Vector2.right * speed;
+        rbody.velocity = gun.transform.right * -speed;
     }
 
     void OnTriggerEnter2D(Collider2D col)
