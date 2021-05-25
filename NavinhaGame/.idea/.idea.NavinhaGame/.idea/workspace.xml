@@ -6,13 +6,13 @@
   <component name="ChangeListManager">
     <list default="true" id="1cc1d91b-c635-45bb-bd14-a11d2b45e00b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.NavinhaGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.NavinhaGame/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/Resources/FMODStudioSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/Resources/FMODStudioSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefab/BasicEnemy .prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/BasicEnemy .prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/EnemyBullet.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/EnemyBullet.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/SmallEnemy.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/SmallEnemy.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/TepeTests.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/TepeTests.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/PoolList.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/PoolList.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemies/AEnemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemies/AEnemy.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemies/BasicEnemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemies/BasicEnemy.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/LargeEnemy.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/LargeEnemy.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Menu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Menu.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FMODAssets/Master.bank" beforeDir="false" afterPath="$PROJECT_DIR$/FMODAssets/Master.bank" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FMODAssets/Master.strings.bank" beforeDir="false" afterPath="$PROJECT_DIR$/FMODAssets/Master.strings.bank" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,7 +44,6 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/BasicEnemyBullet.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/FadeInOutSceneTransition.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Bootstrapper.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/UI/OptionsButton.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/UI/OptionsPanel.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/UI/AbstractPanel.cs" />
@@ -53,6 +52,8 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/BasicEnemy.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/LargeEnemy.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/AEnemy.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/SoundManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1sMfC8ezM1GDJgkXlIqtOMkTHcQ" />
@@ -106,6 +107,7 @@
       <workItem from="1620687259942" duration="7841000" />
       <workItem from="1620772037135" duration="5835000" />
       <workItem from="1620837134645" duration="2034000" />
+      <workItem from="1621887757359" duration="1222000" />
     </task>
     <servers />
   </component>

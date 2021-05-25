@@ -129,6 +129,7 @@ public class Play : IState
 
     public void OnEnter()
     {
+        
         Time.timeScale = 1f;
         FadeInOutSceneTransition.Instance.FadeOut();
     }
