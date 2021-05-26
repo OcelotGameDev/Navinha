@@ -29,6 +29,8 @@ public class BoosGun : MonoBehaviour
         if (bullet != null)
         {
             bullet.transform.position = trfr.transform.position;
+            bullet.transform.rotation = trfr.transform.rotation;
+            bullet.transform.parent = null;
             bullet.SetActive(true);
         }
 
@@ -36,7 +38,14 @@ public class BoosGun : MonoBehaviour
 
     private IEnumerator Cadence()
     {
-        yield return new WaitForSeconds(cadenceTime);
-        Spawner();
+        while (true)
+        {
+            yield return new WaitForSeconds(cadenceTime);
+            Spawner();
+            if (!this.gameObject.activeInHierarchy)
+            {
+                yield break;
+            }
+        }
     }
 }

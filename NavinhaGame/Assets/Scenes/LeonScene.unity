@@ -633,6 +633,10 @@ PrefabInstance:
       propertyPath: refe
       value: 
       objectReference: {fileID: 3320665753995144604, guid: 5ca810a0cc44e0a479fbde00c53f9f4e, type: 3}
+    - target: {fileID: 6358675275625886264, guid: 9c228b0063c96db4dab69b8475b7fa80, type: 3}
+      propertyPath: currentBullet
+      value: BossBullet
+      objectReference: {fileID: 0}
     - target: {fileID: 6358675275625886265, guid: 9c228b0063c96db4dab69b8475b7fa80, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -663,7 +667,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6358675275625886265, guid: 9c228b0063c96db4dab69b8475b7fa80, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.7071068
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 6358675275625886265, guid: 9c228b0063c96db4dab69b8475b7fa80, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -675,7 +679,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6358675275625886265, guid: 9c228b0063c96db4dab69b8475b7fa80, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: -90
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 6358675275625886266, guid: 9c228b0063c96db4dab69b8475b7fa80, type: 3}
       propertyPath: m_Name
@@ -695,6 +699,7 @@ GameObject:
   - component: {fileID: 519420031}
   - component: {fileID: 519420029}
   - component: {fileID: 519420030}
+  - component: {fileID: 519420033}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -799,6 +804,26 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &519420033
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c88f5cead0c0b2a4eb05b5900433f8d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AssetsPPU: 100
+  m_RefResolutionX: 320
+  m_RefResolutionY: 180
+  m_UpscaleRT: 0
+  m_PixelSnapping: 0
+  m_CropFrameX: 0
+  m_CropFrameY: 0
+  m_StretchFill: 0
 --- !u!1 &616831123
 GameObject:
   m_ObjectHideFlags: 0
@@ -997,7 +1022,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 855614008}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 7.87, y: 0, z: 0}
+  m_LocalPosition: {x: 6.53, y: 0, z: 0}
   m_LocalScale: {x: 25, y: 25, z: 1}
   m_Children:
   - {fileID: 189944638}
@@ -1347,6 +1372,10 @@ PrefabInstance:
       propertyPath: refe
       value: 
       objectReference: {fileID: 3320665753995144604, guid: 5ca810a0cc44e0a479fbde00c53f9f4e, type: 3}
+    - target: {fileID: 6358675275625886264, guid: 9c228b0063c96db4dab69b8475b7fa80, type: 3}
+      propertyPath: currentBullet
+      value: BossBullet
+      objectReference: {fileID: 0}
     - target: {fileID: 6358675275625886265, guid: 9c228b0063c96db4dab69b8475b7fa80, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -1365,19 +1394,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6358675275625886265, guid: 9c228b0063c96db4dab69b8475b7fa80, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6358675275625886265, guid: 9c228b0063c96db4dab69b8475b7fa80, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6358675275625886265, guid: 9c228b0063c96db4dab69b8475b7fa80, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6358675275625886265, guid: 9c228b0063c96db4dab69b8475b7fa80, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6358675275625886265, guid: 9c228b0063c96db4dab69b8475b7fa80, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -1389,7 +1418,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6358675275625886265, guid: 9c228b0063c96db4dab69b8475b7fa80, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
+      value: 180
       objectReference: {fileID: 0}
     - target: {fileID: 6358675275625886266, guid: 9c228b0063c96db4dab69b8475b7fa80, type: 3}
       propertyPath: m_Name
@@ -1668,6 +1697,10 @@ PrefabInstance:
       propertyPath: refe
       value: 
       objectReference: {fileID: 3320665753995144604, guid: 5ca810a0cc44e0a479fbde00c53f9f4e, type: 3}
+    - target: {fileID: 6358675275625886264, guid: 9c228b0063c96db4dab69b8475b7fa80, type: 3}
+      propertyPath: currentBullet
+      value: BossBullet
+      objectReference: {fileID: 0}
     - target: {fileID: 6358675275625886265, guid: 9c228b0063c96db4dab69b8475b7fa80, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -1698,7 +1731,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6358675275625886265, guid: 9c228b0063c96db4dab69b8475b7fa80, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.7071068
+      value: -0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 6358675275625886265, guid: 9c228b0063c96db4dab69b8475b7fa80, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -1710,7 +1743,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6358675275625886265, guid: 9c228b0063c96db4dab69b8475b7fa80, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 90
+      value: -90
       objectReference: {fileID: 0}
     - target: {fileID: 6358675275625886266, guid: 9c228b0063c96db4dab69b8475b7fa80, type: 3}
       propertyPath: m_Name
@@ -2177,7 +2210,7 @@ PrefabInstance:
       objectReference: {fileID: 3320665753995144604, guid: 5ca810a0cc44e0a479fbde00c53f9f4e, type: 3}
     - target: {fileID: 6358675275625886264, guid: 9c228b0063c96db4dab69b8475b7fa80, type: 3}
       propertyPath: currentBullet
-      value: BossBullets
+      value: BossBullet
       objectReference: {fileID: 0}
     - target: {fileID: 6358675275625886265, guid: 9c228b0063c96db4dab69b8475b7fa80, type: 3}
       propertyPath: m_RootOrder

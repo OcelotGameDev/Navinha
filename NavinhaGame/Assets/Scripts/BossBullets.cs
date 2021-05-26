@@ -15,7 +15,7 @@ public class BossBullets : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        rbody.velocity = gun.transform.right * -speed;
+        rbody.velocity = this.transform.right * -speed;
     }
 
     void OnTriggerEnter2D(Collider2D col)
