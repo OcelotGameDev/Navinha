@@ -5,7 +5,7 @@ using UnityEngine;
 public class SoundManager : MonoBehaviour
 {
     public static SoundManager Instance { get; private set; }
-
+    public GameObject bossEvent;
     public StudioEventEmitter EventEmitter;
 
     private void Awake()
@@ -17,6 +17,7 @@ public class SoundManager : MonoBehaviour
         }
 
         Instance = this;
+        DontDestroyOnLoad(this.gameObject);
     }
 
     public void OnValidate()

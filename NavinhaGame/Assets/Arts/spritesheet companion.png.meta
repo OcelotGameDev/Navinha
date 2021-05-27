@@ -1,7 +1,16 @@
 fileFormatVersion: 2
-guid: d2f70d67e4919924db2723d09b25474d
+guid: 0bf160adf8bb7c2478c0bfb94e213156
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -2013622562349426635
+    second: spritesheet companion_0
+  - first:
+      213: 2208865113998556710
+    second: spritesheet companion_1
+  - first:
+      213: -1188506026572170367
+    second: spritesheet companion_2
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -46,7 +55,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 32
+  spritePixelsToUnits: 72
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -68,7 +77,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -80,7 +89,19 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -91,13 +112,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: inimigos_0
+      name: spritesheet companion_0
       rect:
         serializedVersion: 2
-        x: 1
-        y: 37
-        width: 47
-        height: 25
+        x: 0
+        y: 6
+        width: 31
+        height: 26
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -105,20 +126,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 22163f1c01340a990800000000000000
-      internalID: -7376822450380381918
+      spriteID: 538537bb2fc2e04e0800000000000000
+      internalID: -2013622562349426635
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: inimigos_1
+      name: spritesheet companion_1
       rect:
         serializedVersion: 2
-        x: 55
-        y: 4
-        width: 50
-        height: 57
+        x: 32
+        y: 6
+        width: 31
+        height: 26
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -126,20 +147,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5cc793b769d56bcb0800000000000000
-      internalID: -4848585047923917627
+      spriteID: 62ef2ac3e1777ae10800000000000000
+      internalID: 2208865113998556710
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: inimigos_9
+      name: spritesheet companion_2
       rect:
         serializedVersion: 2
-        x: 1
-        y: 1
-        width: 30
-        height: 30
+        x: 64
+        y: 6
+        width: 31
+        height: 26
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -147,8 +168,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5ee07850328bffb90800000000000000
-      internalID: -7205838418213400859
+      spriteID: 18b31c8d014918fe0800000000000000
+      internalID: -1188506026572170367
       vertices: []
       indices: 
       edges: []

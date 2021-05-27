@@ -2,16 +2,19 @@ using UnityEngine;
 
 public class Behaviour_Player : MonoBehaviour, IHittable
 {
-    public int maxHp, currentHp, armor;
+    public int maxHp, currentHp, companion;
     public BulletType bulletindex;
     public string currentBullet = "PlayerBullet";
     public float speed, xMax, xMin, yMax, yMin;
     private Rigidbody2D rbody;
+    [SerializeField] FMOD.Studio.EventInstance fmodInstance;
     private bool IsDead => currentHp <= 0;
     public Transform gun;
-    
+
+    public GameObject comp;
     void Start()
     {
+        fmodInstance = FMODUnity.RuntimeManager.CreateInstance("event:/Game_Sounds/Shot");
         rbody = GetComponent<Rigidbody2D>();
     }
     
@@ -50,6 +53,14 @@ public class Behaviour_Player : MonoBehaviour, IHittable
         }
     }
 
+    void CompanionOnOff()
+    {
+        if (companion >= 1)
+        {
+            comp.SetActive(true);
+        }
+    }
+
     void OnTriggerEnter2D(Collider2D col)
     {
         col.gameObject.GetComponent<PickUps>()?.PickUp(this);
@@ -69,9 +80,10 @@ public class Behaviour_Player : MonoBehaviour, IHittable
 
     void ShootBullet()
     {
-        if (Input.GetKeyDown(KeyCode.Return))
+        if (Input.GetKeyDown(KeyCode.Return)|| Input.GetKey(KeyCode.Return))
         {
             Spawner();
+            fmodInstance.start();
         }
     }
 

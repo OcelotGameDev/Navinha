@@ -1,13 +1,19 @@
 fileFormatVersion: 2
-guid: 948a6022a7c16a54c9f954a31a7db1fd
+guid: 12cd75ee97da0884b870ea770b4e7aa7
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4624898055210542603
-    second: tiro player_0
+      213: -8831844669253838818
+    second: paralax(1)_0
   - first:
-      213: -5283230065207943713
-    second: tiro player_1
+      213: -7856196673389964529
+    second: paralax(1)_1
+  - first:
+      213: -2718984582688813358
+    second: paralax(1)_2
+  - first:
+      213: 6648301953781577202
+    second: paralax(1)_3
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -74,7 +80,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -86,7 +92,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -98,7 +104,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -109,43 +115,85 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: tiro player_0
+      name: paralax(1)_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 2
-        width: 16
-        height: 13
+        y: 882
+        width: 1566
+        height: 294
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5f9d7c8f8bf01dfb0800000000000000
-      internalID: -4624898055210542603
+      spriteID: e1892b1011cfe6580800000000000000
+      internalID: -8831844669253838818
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tiro player_1
+      name: paralax(1)_1
       rect:
         serializedVersion: 2
-        x: 16
-        y: 2
-        width: 16
-        height: 13
+        x: 0
+        y: 588
+        width: 1566
+        height: 294
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fdddd985f323ea6b0800000000000000
-      internalID: -5283230065207943713
+      spriteID: f035cfcdfbe29f290800000000000000
+      internalID: -7856196673389964529
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: paralax(1)_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 294
+        width: 1566
+        height: 294
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2dec1178de9344ad0800000000000000
+      internalID: -2718984582688813358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: paralax(1)_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 1566
+        height: 294
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f5bfaa1763834c50800000000000000
+      internalID: 6648301953781577202
       vertices: []
       indices: 
       edges: []
