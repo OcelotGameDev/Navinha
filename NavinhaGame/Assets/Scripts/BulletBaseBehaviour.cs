@@ -29,4 +29,9 @@ public class BulletBaseBehaviour : MonoBehaviour
     {
         this.gameObject.SetActive(false);
     }
+
+    private void OnValidate()
+    {
+        this.gameObject.layer = LayerMask.NameToLayer("PlayerBullets");
+    }
 }

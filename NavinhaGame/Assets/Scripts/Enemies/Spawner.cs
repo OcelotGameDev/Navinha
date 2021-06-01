@@ -10,7 +10,7 @@ public class Spawner : MonoBehaviour
 
     [SerializeField] private SpawnArea[] _areas;
 
-    [SerializeField] private string _enemyToSpawn;
+    [SerializeField] private string[] _enemyToSpawn;
 
     private void Update()
     {
@@ -18,7 +18,7 @@ public class Spawner : MonoBehaviour
         if (_timer <= 0)
         {
             _timer = _timeBetweenSpawns;
-            SpawnEnemy(_enemyToSpawn);
+            SpawnEnemy(_enemyToSpawn[Random.Range(0,_enemyToSpawn.Length)]);
         }
     }
 

@@ -6,11 +6,17 @@ public class Behaviour_Player : MonoBehaviour, IHittable
     public BulletType bulletindex;
     public string currentBullet = "PlayerBullet";
     public float speed, xMax, xMin, yMax, yMin;
+    
+    //Floats da cadencia de tiro
+    public float shootCadence;
+    float timer;
     private Rigidbody2D rbody;
-    [SerializeField] FMOD.Studio.EventInstance fmodInstance;
+    
     private bool IsDead => currentHp <= 0;
     public Transform gun;
-
+    
+    [SerializeField] FMOD.Studio.EventInstance fmodInstance;
+    
     public GameObject comp;
     void Start()
     {
@@ -21,6 +27,7 @@ public class Behaviour_Player : MonoBehaviour, IHittable
     void OnEnable()
     {
         currentHp = maxHp;
+        timer = 0f;
     }
     
     public void ChangeBullet(BulletType type)
@@ -80,8 +87,14 @@ public class Behaviour_Player : MonoBehaviour, IHittable
 
     void ShootBullet()
     {
-        if (Input.GetKeyDown(KeyCode.Return)|| Input.GetKey(KeyCode.Return))
+        if (timer > 0f)
         {
+            timer -= Time.deltaTime;
+        }
+       
+        else if (Input.GetKeyDown(KeyCode.Return) || Input.GetKey(KeyCode.Return))
+        { 
+            timer = shootCadence;
             Spawner();
             fmodInstance.start();
         }
