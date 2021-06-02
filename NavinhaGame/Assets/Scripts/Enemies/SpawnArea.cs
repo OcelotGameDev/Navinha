@@ -31,6 +31,7 @@ public class SpawnArea : MonoBehaviour
         _currentRotation = aux.rotation * Quaternion.Euler(0, 0,
             Vector2.SignedAngle(aux.right, aux.TransformDirection(_direction)));
     }
+#if UNITY_EDITOR
 
     private void OnDrawGizmos()
     {
@@ -48,6 +49,7 @@ public class SpawnArea : MonoBehaviour
         
         Handles.color = Color.white;
     }
+#endif
 }
 
 #if UNITY_EDITOR

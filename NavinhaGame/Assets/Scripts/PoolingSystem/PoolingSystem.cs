@@ -6,7 +6,7 @@ using UnityEngine.AddressableAssets;
 public class PoolingSystem : MonoBehaviour
 {
     public static PoolingSystem Instance { get; private set; } = null;
-
+    [SerializeField] private PoolPrefabScriptableObject _poolsSO;
     private Dictionary<string, Pool> _poolsDictionary;
     
     private void Awake()
@@ -19,11 +19,12 @@ public class PoolingSystem : MonoBehaviour
 
         Instance = this;
         DontDestroyOnLoad(this.gameObject);
+        SetupPools(_poolsSO.PrefabPools);
     }
 
-    private IEnumerator Start()
+    private void Start()
     {
-        var operation = Addressables.LoadAssetAsync<PoolPrefabScriptableObject>("PoolList");
+        /*var operation = Addressables.LoadAssetAsync<PoolPrefabScriptableObject>("PoolList");
         
         while (!operation.IsDone)
         {
@@ -35,7 +36,7 @@ public class PoolingSystem : MonoBehaviour
         if (poolList != null)
         {
             SetupPools(poolList.PrefabPools);
-        }
+        }*/
     }
     
     private void SetupPools(PrefabPool[] prefabPools)

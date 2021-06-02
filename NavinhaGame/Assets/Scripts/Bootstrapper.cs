@@ -5,7 +5,7 @@ public static class Bootstrapper
     [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.SubsystemRegistration)]
     public static void Setup()
     {
-        SetupPoolingSystem();
+        //SetupPoolingSystem();
     }
 
     private static void SetupPoolingSystem()

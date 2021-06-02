@@ -27,11 +27,14 @@ public class Behaviour_Player : MonoBehaviour, IHittable
     
     [SerializeField] FMOD.Studio.EventInstance fmodInstance;
     
+    void Awake()
+    {
+        rbody = GetComponent<Rigidbody2D>();
+    }
     
     void Start()
     {
         fmodInstance = FMODUnity.RuntimeManager.CreateInstance("event:/Game_Sounds/Shot");
-        rbody = GetComponent<Rigidbody2D>();
     }
     
     void OnEnable()
