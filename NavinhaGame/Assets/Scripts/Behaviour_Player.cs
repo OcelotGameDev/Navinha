@@ -2,22 +2,32 @@ using UnityEngine;
 
 public class Behaviour_Player : MonoBehaviour, IHittable
 {
-    public int maxHp, currentHp, companion;
-    public BulletType bulletindex;
-    public string currentBullet = "PlayerBullet";
+    [Header("Movement Settings")]
     public float speed, xMax, xMin, yMax, yMin;
-    
-    //Floats da cadencia de tiro
-    public float shootCadence;
-    float timer;
     private Rigidbody2D rbody;
     
+    [Header("CompanionSettings")]
+    [Range(0.0f, 1.0f)]
+    public float offSetPosY;
+    public GameObject companion;
+
+    [Header("Floats da cadencia de tiro")] 
+    public float shootCadence;
+    float timer;
+
+    [Header("Life Settings")]
+    public int maxHp;
+    public int currentHp;
     private bool IsDead => currentHp <= 0;
+    
+    [Header("Shooting Settings")]
+    public BulletType bulletindex;
+    public string currentBullet = "PlayerBullet";
     public Transform gun;
     
     [SerializeField] FMOD.Studio.EventInstance fmodInstance;
     
-    public GameObject comp;
+    
     void Start()
     {
         fmodInstance = FMODUnity.RuntimeManager.CreateInstance("event:/Game_Sounds/Shot");
@@ -46,7 +56,27 @@ public class Behaviour_Player : MonoBehaviour, IHittable
             default:
                 break;
         }
-    }    
+    }
+
+    void CompanionOffset()
+    {
+        companion.transform.position = new Vector2(companion.transform.position.x, this.transform.position.y*-offSetPosY);
+    }
+
+    void ShootBullet()
+    {
+        if (timer > 0f)
+        {
+            timer -= Time.deltaTime;
+        }
+
+        else if (Input.GetKeyDown(KeyCode.Return) || Input.GetKey(KeyCode.Return))
+        {
+            timer = shootCadence;
+            Spawner();
+            fmodInstance.start();
+        }
+    }
 
     void Spawner()
     {
@@ -57,14 +87,6 @@ public class Behaviour_Player : MonoBehaviour, IHittable
         {
             bullet.transform.position = gun.position;
             bullet.SetActive(true);
-        }
-    }
-
-    void CompanionOnOff()
-    {
-        if (companion >= 1)
-        {
-            comp.SetActive(true);
         }
     }
 
@@ -85,21 +107,6 @@ public class Behaviour_Player : MonoBehaviour, IHittable
         this.gameObject.SetActive(false);
     }
 
-    void ShootBullet()
-    {
-        if (timer > 0f)
-        {
-            timer -= Time.deltaTime;
-        }
-       
-        else if (Input.GetKeyDown(KeyCode.Return) || Input.GetKey(KeyCode.Return))
-        { 
-            timer = shootCadence;
-            Spawner();
-            fmodInstance.start();
-        }
-    }
-
     // Update is called once per frame
     void Update()
     {
@@ -108,10 +115,11 @@ public class Behaviour_Player : MonoBehaviour, IHittable
 
         Vector2 movement = new Vector2(moveX, moveY).normalized;
 
-        rbody.velocity = movement * speed;
-
+        //rbody.velocity = movement * speed;
+        rbody.position += movement * speed*Time.deltaTime;
         rbody.position = new Vector2(Mathf.Clamp(rbody.position.x, xMin, xMax), Mathf.Clamp(rbody.position.y, yMin, yMax));
-
+       
         ShootBullet();
+        CompanionOffset();
     }
 }

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BossOneMove : MonoBehaviour, IHittable
 {
-    public float currentHp, maxHp, rotAngle;
+    public float currentHp, maxHp, speed;
     private Rigidbody2D rbody;
     private bool IsDead => currentHp <= 0;
 
@@ -25,12 +25,6 @@ public class BossOneMove : MonoBehaviour, IHittable
         if (IsDead) Die();
     }
 
-    void AddRotationToBoss()
-    {
-
-        rbody.transform.Rotate(transform.rotation.x, transform.rotation.y, rotAngle);
-    }
-
     private void Die()
     {
         this.gameObject.SetActive(false);
@@ -39,6 +33,6 @@ public class BossOneMove : MonoBehaviour, IHittable
     // Update is called once per frame
     void Update()
     {
-        AddRotationToBoss();
+        rbody.velocity = rbody.transform.right * speed;
     }
 }

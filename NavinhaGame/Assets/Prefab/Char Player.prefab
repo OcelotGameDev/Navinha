@@ -11,13 +11,16 @@ GameObject:
   - component: {fileID: 555265046}
   - component: {fileID: 1438795945023994630}
   - component: {fileID: 8243982365715948748}
-  m_Layer: 0
+  - component: {fileID: 9025983807034735072}
+  - component: {fileID: 260211355}
+  - component: {fileID: 260211356}
+  m_Layer: 3
   m_Name: Companion
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &555265046
 Transform:
   m_ObjectHideFlags: 0
@@ -26,8 +29,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 555265045}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.59, y: -0.87, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0.88, y: 0.96, z: 0}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1}
   m_Children: []
   m_Father: {fileID: 1199171114330603066}
   m_RootOrder: 1
@@ -98,6 +101,63 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &9025983807034735072
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 555265045}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e6102a0914eff94b85dcbaa0c96951b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentBullet: PlayerBullet
+  cadenceTime: 0.25
+  currentHp: 0
+  maxHp: 1
+  offsetPosX: 0.55
+  offsetPosY: -0.1
+--- !u!114 &260211355
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 555265045}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  Event: event:/Game_Sounds/Shot
+  PlayEvent: 0
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 0
+  OverrideMaxDistance: 0
+--- !u!58 &260211356
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 555265045}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.21527778
 --- !u!1 &1199171113953407670
 GameObject:
   m_ObjectHideFlags: 0
@@ -107,7 +167,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1199171113953407671}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: ShooterPoint
   m_TagString: Untagged
   m_Icon: {fileID: 1206586993520771344, guid: 0000000000000000d000000000000000, type: 0}
@@ -142,7 +202,7 @@ GameObject:
   - component: {fileID: 1199171114330603064}
   - component: {fileID: 1199171114330603067}
   - component: {fileID: 886330303}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Char Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -275,18 +335,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d387a8b0ec03e746aef3253fce54fb4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 10
+  xMax: 3.75
+  xMin: -3.75
+  yMax: 1.85
+  yMin: -1.85
+  offSetPosY: 0
+  companion: {fileID: 555265045}
+  shootCadence: 0.1
   maxHp: 100
   currentHp: 0
-  companion: 0
   bulletindex: 0
   currentBullet: PlayerBullet
-  speed: 10
-  xMax: 15
-  xMin: -15
-  yMax: 9.5
-  yMin: -9.5
   gun: {fileID: 1199171113953407671}
-  comp: {fileID: 555265045}
 --- !u!114 &886330303
 MonoBehaviour:
   m_ObjectHideFlags: 0

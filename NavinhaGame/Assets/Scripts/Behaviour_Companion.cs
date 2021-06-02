@@ -2,11 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Behaviour_Companion : MonoBehaviour
+public class Behaviour_Companion : MonoBehaviour, IHittable
 {
-    public string currentBullet;
     Transform trfr;
-    public float cadenceTime;
+    public string currentBullet;
+    public float cadenceTime, currentHp, maxHp;
+    [Range(-1.0f, 1.0f)] public float offsetPosX, offsetPosY;
+    private bool IsDead => currentHp <= 0;
 
     void Start()
     {
@@ -14,9 +16,9 @@ public class Behaviour_Companion : MonoBehaviour
         StartCoroutine(Cadence());
     }
 
-    private void Die()
+    void OnEnable()
     {
-        this.gameObject.SetActive(false);
+        currentHp = maxHp;
     }
 
     void Spawner()
@@ -26,7 +28,7 @@ public class Behaviour_Companion : MonoBehaviour
 
         if (bullet != null)
         {
-            bullet.transform.position = this.gameObject.transform.position;
+            bullet.transform.position = new Vector2(trfr.transform.position.x + offsetPosX, trfr.transform.position.y + offsetPosY);
             bullet.SetActive(true);
         }
     }
@@ -42,5 +44,17 @@ public class Behaviour_Companion : MonoBehaviour
                 yield break;
             }
         }
+    }
+
+    public void Hit(int damage = 1)
+    {
+        currentHp -= damage;
+
+        if (IsDead) Die();
+    }
+
+    private void Die()
+    {
+        this.gameObject.SetActive(false);
     }
 }

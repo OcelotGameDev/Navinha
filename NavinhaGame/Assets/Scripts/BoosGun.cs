@@ -30,7 +30,6 @@ public class BoosGun : MonoBehaviour
         {
             bullet.transform.position = trfr.transform.position;
             bullet.transform.rotation = trfr.transform.rotation;
-            bullet.transform.parent = null;
             bullet.SetActive(true);
         }
 

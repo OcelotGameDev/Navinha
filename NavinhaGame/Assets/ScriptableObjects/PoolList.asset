@@ -29,7 +29,7 @@ MonoBehaviour:
     Tag: SmallEnemy
     PrewarmQuantity: 10
     Prewarm: 1
-  - Prefab: {fileID: 332870528913734637, guid: b86bd8f740331394ca8cc0c29c9019aa, type: 3}
+  - Prefab: {fileID: 3399806713883063312, guid: 05c86f65a9b741248b28abc6c94caac0, type: 3}
     Tag: LargeEnemy
     PrewarmQuantity: 10
     Prewarm: 1

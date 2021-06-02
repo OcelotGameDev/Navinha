@@ -6,6 +6,9 @@ public class PickUp_Heal : PickUps
 {
     public override void PickUp(Behaviour_Player player)
     {
-        player.currentHp += 1;
+        if (player.currentHp > player.maxHp)
+        {
+            player.currentHp += 1;
+        }
     }
 }

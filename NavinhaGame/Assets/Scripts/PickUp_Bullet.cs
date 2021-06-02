@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class PickUp_Bullet : PickUps
 {
-    public BulletType type;
-
     public override void PickUp(Behaviour_Player player)
     {
-        player.bulletindex = type;
+        if (player.companion.activeInHierarchy == false)
+        {
+            player.companion.SetActive(true);
+        }
     }
 }
