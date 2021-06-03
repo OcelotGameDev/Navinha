@@ -182,7 +182,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1199171113953407670}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1, y: 0, z: 0}
+  m_LocalPosition: {x: 0.375, y: 0.13, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1199171114330603066}
@@ -198,6 +198,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1199171114330603066}
   - component: {fileID: 1199171114330603065}
+  - component: {fileID: 1339965902}
   - component: {fileID: 1199171114330603061}
   - component: {fileID: 1199171114330603064}
   - component: {fileID: 1199171114330603067}
@@ -246,6 +247,25 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!95 &1339965902
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1199171114330603060}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 64484a61e8111a24da516398c8a5dfa3, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!212 &1199171114330603061
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -286,7 +306,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 7482667652216324306, guid: 48e93eef0688c4a259cb0eddcd8661f7, type: 3}
+  m_Sprite: {fileID: 9066317370898968207, guid: 57f168f5fb7fbbb43a92864a39bd056f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -314,14 +334,14 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 0.4861111, y: 0.6527778}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.551416, y: 0.66314584}
   m_EdgeRadius: 0
 --- !u!114 &1199171114330603067
 MonoBehaviour:
@@ -336,11 +356,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
-  xMax: 3.75
-  xMin: -3.75
-  yMax: 1.85
-  yMin: -1.85
-  offSetPosY: 0
+  xMax: 3.25
+  xMin: -3.25
+  yMax: 1.62
+  yMin: -1.61
+  offSetPosY: 0.5
   companion: {fileID: 555265045}
   shootCadence: 0.1
   maxHp: 100
@@ -348,6 +368,7 @@ MonoBehaviour:
   bulletindex: 0
   currentBullet: PlayerBullet
   gun: {fileID: 1199171113953407671}
+  shooting: 0
 --- !u!114 &886330303
 MonoBehaviour:
   m_ObjectHideFlags: 0

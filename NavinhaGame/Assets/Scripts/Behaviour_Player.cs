@@ -5,6 +5,7 @@ public class Behaviour_Player : MonoBehaviour, IHittable
     [Header("Movement Settings")]
     public float speed, xMax, xMin, yMax, yMin;
     private Rigidbody2D rbody;
+    Animator anim;
     
     [Header("CompanionSettings")]
     [Range(0.0f, 1.0f)]
@@ -24,7 +25,8 @@ public class Behaviour_Player : MonoBehaviour, IHittable
     public BulletType bulletindex;
     public string currentBullet = "PlayerBullet";
     public Transform gun;
-    
+    public bool shooting;
+
     [SerializeField] FMOD.Studio.EventInstance fmodInstance;
     
     void Awake()
@@ -34,6 +36,7 @@ public class Behaviour_Player : MonoBehaviour, IHittable
     
     void Start()
     {
+        anim = GetComponent<Animator>();
         fmodInstance = FMODUnity.RuntimeManager.CreateInstance("event:/Game_Sounds/Shot");
     }
     
@@ -63,7 +66,7 @@ public class Behaviour_Player : MonoBehaviour, IHittable
 
     void CompanionOffset()
     {
-        companion.transform.position = new Vector2(companion.transform.position.x, this.transform.position.y*-offSetPosY);
+        companion.transform.position = new Vector2(companion.transform.position.x, this.transform.position.y*offSetPosY);
     }
 
     void ShootBullet()
@@ -77,6 +80,7 @@ public class Behaviour_Player : MonoBehaviour, IHittable
         {
             timer = shootCadence;
             Spawner();
+            shooting = true;
             fmodInstance.start();
         }
     }
@@ -110,18 +114,24 @@ public class Behaviour_Player : MonoBehaviour, IHittable
         this.gameObject.SetActive(false);
     }
 
-    // Update is called once per frame
-    void Update()
+    void MoveAnimate()
     {
         float moveX = Input.GetAxisRaw("Horizontal");
         float moveY = Input.GetAxisRaw("Vertical");
 
         Vector2 movement = new Vector2(moveX, moveY).normalized;
 
-        //rbody.velocity = movement * speed;
-        rbody.position += movement * speed*Time.deltaTime;
+        rbody.position += movement * speed * Time.deltaTime;
         rbody.position = new Vector2(Mathf.Clamp(rbody.position.x, xMin, xMax), Mathf.Clamp(rbody.position.y, yMin, yMax));
-       
+
+        anim.SetBool("shoot",shooting);
+        anim.SetFloat("fly", movement.magnitude);
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        MoveAnimate();
         ShootBullet();
         CompanionOffset();
     }
