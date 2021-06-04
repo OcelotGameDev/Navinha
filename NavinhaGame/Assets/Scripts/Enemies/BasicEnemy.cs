@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class BasicEnemy : AEnemy
@@ -7,11 +8,33 @@ public class BasicEnemy : AEnemy
     [SerializeField] private float _timeBetweenShots = 1f;
     private float _timer;
 
+    private bool _canShoot = false;
+    
+    private VisibleInvisibleSignals _invisibleSignals;
+
+    private void Awake()
+    {
+        _invisibleSignals = this.GetComponentInChildren<VisibleInvisibleSignals>();
+    }
+
     protected override void OnEnable()
     {
         base.OnEnable();
 
+        _canShoot = false;
+
         _timer = _timeBetweenShots;
+
+        _invisibleSignals.OnBecameInvisibleSignal += Despawn;
+        _invisibleSignals.OnBecameVisibleSignal += EnableShooting;
+    }
+
+    protected override void OnDisable()
+    {
+        base.OnDisable();
+        
+        _invisibleSignals.OnBecameInvisibleSignal -= Despawn;
+        _invisibleSignals.OnBecameVisibleSignal -= EnableShooting;
     }
     
     protected override void Move()
@@ -21,6 +44,8 @@ public class BasicEnemy : AEnemy
 
     private void Update()
     {
+        if (!_canShoot) return;
+        
         _timer -= Time.deltaTime;
 
         if (_timer < 0)
@@ -32,6 +57,13 @@ public class BasicEnemy : AEnemy
 
     private void Shoot()
     {
+        
         PoolingSystem.Instance.SpawnObject("EnemyBullet", this.transform);
+    }
+    
+    private void EnableShooting()
+    {
+        Debug.Log($"{this.gameObject} Shooting Enabled");
+        _canShoot = true;
     }
 }

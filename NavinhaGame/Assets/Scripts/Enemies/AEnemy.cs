@@ -1,4 +1,7 @@
-﻿using UnityEngine;
+﻿using System;
+using System.Security.Cryptography;
+using UnityEngine;
+using UnityEngine.Serialization;
 
 [RequireComponent(typeof(Rigidbody2D))]
 public abstract class AEnemy : MonoBehaviour, IHittable
@@ -10,18 +13,20 @@ public abstract class AEnemy : MonoBehaviour, IHittable
     
     [SerializeField] protected Rigidbody2D _rigidbody;
     
-    [SerializeField] private OnBecomeInvisibleSignal _invisibleSignal;
+    [FormerlySerializedAs("_invisibleSignal")] [SerializeField] private VisibleInvisibleSignals invisibleSignals;
+
+    public static Action<GameObject> OnDespawn;
 
     protected virtual void OnEnable()
     {
         _currentLifePoints = _maxLifePoints;
         
-        _invisibleSignal.OnInvisibleBecame += ListenBecameInvisible;
+        invisibleSignals.OnBecameInvisibleSignal += ListenBecameInvisible;
     }
 
     protected virtual void OnDisable()
     {
-        _invisibleSignal.OnInvisibleBecame -= ListenBecameInvisible;
+        invisibleSignals.OnBecameInvisibleSignal -= ListenBecameInvisible;
     }
     
     private void ListenBecameInvisible()
@@ -45,7 +50,18 @@ public abstract class AEnemy : MonoBehaviour, IHittable
 
     private void Die()
     {
-        this.gameObject.SetActive(false);   
+        Despawn();
+    }
+
+    private void OnBecameInvisible()
+    {
+        Despawn();
+    }
+
+    protected void Despawn()
+    {
+        OnDespawn?.Invoke(this.gameObject);
+        this.gameObject.SetActive(false);
     }
 
     protected virtual void OnValidate()
@@ -54,11 +70,10 @@ public abstract class AEnemy : MonoBehaviour, IHittable
         
         if (!_rigidbody) _rigidbody = this.GetComponent<Rigidbody2D>();
 
-        if (_invisibleSignal) return;
-        _invisibleSignal = this.GetComponentInChildren<OnBecomeInvisibleSignal>();
+        if (invisibleSignals) return;
+        invisibleSignals = this.GetComponentInChildren<VisibleInvisibleSignals>();
 
-        if (_invisibleSignal) return;
-        _invisibleSignal = this.GetComponentInChildren<SpriteRenderer>().gameObject.AddComponent<OnBecomeInvisibleSignal>();
-
+        if (invisibleSignals) return;
+        invisibleSignals = this.GetComponentInChildren<SpriteRenderer>().gameObject.AddComponent<VisibleInvisibleSignals>();
     }
 }

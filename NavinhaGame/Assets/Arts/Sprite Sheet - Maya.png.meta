@@ -98,7 +98,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -110,7 +110,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -136,12 +136,12 @@ TextureImporter:
       name: Sprite Sheet - Maya_0
       rect:
         serializedVersion: 2
-        x: 24
-        y: 129
-        width: 35
-        height: 47
+        x: 23
+        y: 128
+        width: 37
+        height: 49
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -157,12 +157,12 @@ TextureImporter:
       name: Sprite Sheet - Maya_1
       rect:
         serializedVersion: 2
-        x: 72
-        y: 128
-        width: 35
-        height: 47
+        x: 71
+        y: 127
+        width: 37
+        height: 49
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -178,12 +178,12 @@ TextureImporter:
       name: Sprite Sheet - Maya_2
       rect:
         serializedVersion: 2
-        x: 115
-        y: 129
-        width: 45
-        height: 47
+        x: 114
+        y: 128
+        width: 47
+        height: 49
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -199,12 +199,12 @@ TextureImporter:
       name: Sprite Sheet - Maya_3
       rect:
         serializedVersion: 2
-        x: 163
+        x: 162
         y: 128
-        width: 45
-        height: 47
+        width: 47
+        height: 48
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -220,12 +220,12 @@ TextureImporter:
       name: Sprite Sheet - Maya_4
       rect:
         serializedVersion: 2
-        x: 17
-        y: 81
-        width: 39
-        height: 45
+        x: 16
+        y: 80
+        width: 41
+        height: 47
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -241,12 +241,12 @@ TextureImporter:
       name: Sprite Sheet - Maya_5
       rect:
         serializedVersion: 2
-        x: 65
-        y: 81
-        width: 39
-        height: 45
+        x: 64
+        y: 80
+        width: 41
+        height: 47
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -262,12 +262,12 @@ TextureImporter:
       name: Sprite Sheet - Maya_6
       rect:
         serializedVersion: 2
-        x: 113
-        y: 81
-        width: 39
-        height: 45
+        x: 112
+        y: 80
+        width: 41
+        height: 47
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -288,7 +288,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -309,7 +309,7 @@ TextureImporter:
         width: 35
         height: 47
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -330,7 +330,7 @@ TextureImporter:
         width: 45
         height: 47
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []

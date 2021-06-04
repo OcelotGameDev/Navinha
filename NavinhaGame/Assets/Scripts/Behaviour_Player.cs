@@ -36,7 +36,7 @@ public class Behaviour_Player : MonoBehaviour, IHittable
     
     void Start()
     {
-        anim = GetComponent<Animator>();
+        anim = GetComponentInChildren<Animator>();
         fmodInstance = FMODUnity.RuntimeManager.CreateInstance("event:/Game_Sounds/Shot");
     }
     

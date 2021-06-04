@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using DG.Tweening;
 using UnityEngine;
@@ -17,6 +18,13 @@ public class SmallEnemy : AEnemy
     private bool _lookAt = false;
     private bool _shoot = false;
 
+    private VisibleInvisibleSignals _invisibleSignals;
+    
+    private void Awake()
+    {
+        _invisibleSignals = this.GetComponentInChildren<VisibleInvisibleSignals>();
+    }
+
     protected override void OnEnable()
     {
         _lookAt = false;
@@ -32,9 +40,15 @@ public class SmallEnemy : AEnemy
         if (!behaviourPlayer) return;
 
         _player = behaviourPlayer.gameObject;
+        
+        _invisibleSignals.OnBecameInvisibleSignal += Despawn;
     }
 
-    
+    protected override void OnDisable()
+    {
+        base.OnDisable();
+        _invisibleSignals.OnBecameInvisibleSignal -= Despawn;
+    }
 
     private IEnumerator MovementAwait()
     {

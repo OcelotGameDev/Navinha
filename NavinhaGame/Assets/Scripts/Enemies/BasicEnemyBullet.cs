@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Serialization;
 
 [RequireComponent(typeof(Rigidbody2D))]
 public class BasicEnemyBullet : MonoBehaviour
@@ -7,7 +8,7 @@ public class BasicEnemyBullet : MonoBehaviour
     
     [SerializeField] private Rigidbody2D _rigidbody;
     
-    [SerializeField] private OnBecomeInvisibleSignal _invisibleSignal;
+    [FormerlySerializedAs("_invisibleSignal")] [SerializeField] private VisibleInvisibleSignals invisibleSignals;
 
     private void Update()
     {
@@ -16,12 +17,12 @@ public class BasicEnemyBullet : MonoBehaviour
     
     private void OnEnable()
     {
-        _invisibleSignal.OnInvisibleBecame += ListenBecameInvisible;
+        invisibleSignals.OnBecameInvisibleSignal += ListenBecameInvisible;
     }
 
     private void OnDisable()
     {
-        _invisibleSignal.OnInvisibleBecame -= ListenBecameInvisible;
+        invisibleSignals.OnBecameInvisibleSignal -= ListenBecameInvisible;
     }
     
     private void ListenBecameInvisible()
@@ -42,10 +43,10 @@ public class BasicEnemyBullet : MonoBehaviour
     {
         if (!_rigidbody) _rigidbody = this.GetComponent<Rigidbody2D>();
         
-        if (_invisibleSignal) return;
-        _invisibleSignal = this.GetComponentInChildren<OnBecomeInvisibleSignal>();
+        if (invisibleSignals) return;
+        invisibleSignals = this.GetComponentInChildren<VisibleInvisibleSignals>();
 
-        if (_invisibleSignal) return;
-        _invisibleSignal = this.GetComponentInChildren<SpriteRenderer>().gameObject.AddComponent<OnBecomeInvisibleSignal>();
+        if (invisibleSignals) return;
+        invisibleSignals = this.GetComponentInChildren<SpriteRenderer>().gameObject.AddComponent<VisibleInvisibleSignals>();
     }
 }
