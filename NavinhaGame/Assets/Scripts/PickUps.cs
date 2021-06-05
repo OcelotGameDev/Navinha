@@ -13,4 +13,10 @@ public enum BulletType
 public abstract class PickUps : MonoBehaviour
 {
     public abstract void PickUp(Behaviour_Player player);
+
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+        //Debug.LogError("Pega no meu pau");
+        this.gameObject.SetActive(false);
+    }
 }
