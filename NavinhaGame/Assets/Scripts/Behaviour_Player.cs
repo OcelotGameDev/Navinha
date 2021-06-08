@@ -74,6 +74,7 @@ public class Behaviour_Player : MonoBehaviour, IHittable
         if (timer > 0f)
         {
             timer -= Time.deltaTime;
+            //shooting = false;
         }
 
         else if (Input.GetKeyDown(KeyCode.Return) || Input.GetKey(KeyCode.Return))
@@ -83,6 +84,7 @@ public class Behaviour_Player : MonoBehaviour, IHittable
             shooting = true;
             fmodInstance.start();
         }
+        else { shooting = false; }
     }
 
     void Spawner()

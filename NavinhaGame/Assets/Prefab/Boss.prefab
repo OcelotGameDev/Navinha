@@ -46,7 +46,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d0d37ef0d7d48e4fa7f0591e24f078b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerT: {fileID: 0}
   arrayPos:
   - {fileID: 0}
   - {fileID: 0}
@@ -61,7 +60,7 @@ MonoBehaviour:
   cadenceTimeLower: 0.25
   currentHp: 0
   maxHp: 0
-  rotAngle: 0
+  angle: 90
 --- !u!212 &9069213209666626034
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -149,7 +148,7 @@ PrefabInstance:
       objectReference: {fileID: 3320665753995144604, guid: 5ca810a0cc44e0a479fbde00c53f9f4e, type: 3}
     - target: {fileID: 6358675275625886264, guid: 9c228b0063c96db4dab69b8475b7fa80, type: 3}
       propertyPath: cadenceTime
-      value: 0.25
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 6358675275625886264, guid: 9c228b0063c96db4dab69b8475b7fa80, type: 3}
       propertyPath: currentBullet
