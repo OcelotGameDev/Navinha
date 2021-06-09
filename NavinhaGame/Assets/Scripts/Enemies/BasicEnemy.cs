@@ -12,6 +12,8 @@ public class BasicEnemy : AEnemy
     
     private VisibleInvisibleSignals _invisibleSignals;
 
+    [SerializeField] private Transform _gunpoint;
+
     private void Awake()
     {
         _invisibleSignals = this.GetComponentInChildren<VisibleInvisibleSignals>();
@@ -57,8 +59,8 @@ public class BasicEnemy : AEnemy
 
     private void Shoot()
     {
-        
-        PoolingSystem.Instance.SpawnObject("EnemyBullet", this.transform);
+        var bullet = PoolingSystem.Instance.SpawnObject("BossBullet", this.transform);
+        bullet.transform.rotation = _gunpoint.rotation;
     }
     
     private void EnableShooting()
