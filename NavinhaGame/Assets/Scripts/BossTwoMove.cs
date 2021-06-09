@@ -7,11 +7,10 @@ public class BossTwoMove : MonoBehaviour, IHittable
     Vector2 currentPos, nextPos;
     Vector2 dir;
 
-    public Transform playerT;
     public Transform[] arrayPos;
-    public float lerpSpeed, cadenceTimeHigh, cadenceTimeLower, currentHp, maxHp, rotAngle;
+    public float lerpSpeed, cadenceTimeHigh, cadenceTimeLower, currentHp, maxHp;
 
-    float angle;
+    public float angle;
     int arrayIndex;
 
     Rigidbody2D rbody;
@@ -20,7 +19,6 @@ public class BossTwoMove : MonoBehaviour, IHittable
     void OnEnable()
     {
         currentHp = maxHp;
-        //SoundManager.Instance.bossEvent.SetActive(true);
     }
 
     void Start()
@@ -61,11 +59,12 @@ public class BossTwoMove : MonoBehaviour, IHittable
 
     void Update()
     {
-        dir = playerT.position - this.transform.position;
+        /*dir = playerT.position - this.transform.position;
         dir = dir.normalized;
         angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
-        transform.rotation = Quaternion.Euler(0f,0f,angle);
+        transform.rotation = Quaternion.Euler(0f,0f,angle);*/
         transform.position = Vector2.Lerp(transform.position, nextPos, lerpSpeed * Time.deltaTime);
+        transform.Rotate(new Vector3(transform.rotation.x, transform.rotation.y, angle)*Time.deltaTime);
 
     }
 }

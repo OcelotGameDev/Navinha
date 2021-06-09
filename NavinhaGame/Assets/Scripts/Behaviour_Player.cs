@@ -10,7 +10,7 @@ public class Behaviour_Player : MonoBehaviour, IHittable
     [Header("CompanionSettings")]
     [Range(0.0f, 1.0f)]
     public float offSetPosY;
-    public GameObject companion;
+    public GameObject companionObj;
 
     [Header("Floats da cadencia de tiro")] 
     public float shootCadence;
@@ -66,7 +66,7 @@ public class Behaviour_Player : MonoBehaviour, IHittable
 
     void CompanionOffset()
     {
-        companion.transform.position = new Vector2(companion.transform.position.x, this.transform.position.y*offSetPosY);
+        companionObj.transform.position = new Vector2(companionObj.transform.position.x, this.transform.position.y*offSetPosY);
     }
 
     void ShootBullet()
@@ -74,6 +74,7 @@ public class Behaviour_Player : MonoBehaviour, IHittable
         if (timer > 0f)
         {
             timer -= Time.deltaTime;
+            //shooting = false;
         }
 
         else if (Input.GetKeyDown(KeyCode.Return) || Input.GetKey(KeyCode.Return))
@@ -83,6 +84,7 @@ public class Behaviour_Player : MonoBehaviour, IHittable
             shooting = true;
             fmodInstance.start();
         }
+        else { shooting = false; }
     }
 
     void Spawner()
@@ -104,8 +106,12 @@ public class Behaviour_Player : MonoBehaviour, IHittable
 
     public void Hit(int damage = 1)
     {
-        currentHp -= damage;
-
+        if (companionObj.activeInHierarchy)
+        {
+            companionObj.SetActive(false);
+        }
+        else {currentHp -= damage;}
+        
         if (IsDead) Die();
     }
 

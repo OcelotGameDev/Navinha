@@ -6,9 +6,9 @@ public class PickUp_Bullet : PickUps
 {
     public override void PickUp(Behaviour_Player player)
     {
-        if (player.companion.activeInHierarchy == false)
+        if (!player.companionObj.activeInHierarchy)
         {
-            player.companion.SetActive(true);
+            player.companionObj.SetActive(true);
         }
     }
 }
