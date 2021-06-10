@@ -66,7 +66,7 @@ public class Behaviour_Player : MonoBehaviour, IHittable
 
     void CompanionOffset()
     {
-        companionObj.transform.position = new Vector2(companionObj.transform.position.x, this.transform.position.y*offSetPosY);
+        //companionObj.transform.position = new Vector2(companionObj.transform.position.x, this.transform.position.y*offSetPosY);
     }
 
     void ShootBullet()
