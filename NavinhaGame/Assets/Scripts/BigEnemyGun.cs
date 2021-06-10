@@ -37,8 +37,10 @@ public class BigEnemyGun : MonoBehaviour
         //Instantiate
         GameObject bullet = PoolingSystem.Instance.SpawnObject(currentBullet);
 
+        Debug.Log("Spawn BUllet", this.gameObject);
         if (bullet != null)
         {
+            Debug.Log("Bullet Spawned", this.gameObject);
             bullet.transform.position = trfr.transform.position;
             bullet.transform.rotation = trfr.transform.rotation;
             bullet.SetActive(true);

@@ -8,33 +8,12 @@
       <change afterPath="$PROJECT_DIR$/Assets/Scripts/BigEnemy.cs" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Assets/Scripts/Enemies/VisibleInvisibleSignals.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.NavinhaGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.NavinhaGame/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Arts/HUDOVerlay1.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Arts/HUDOVerlay1.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Arts/Menu.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Arts/Menu.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Arts/RenderToCanvas.renderTexture" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Arts/RenderToCanvas.renderTexture" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Arts/Sprite Sheet - Maya.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Arts/Sprite Sheet - Maya.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Arts/Sprite Sheet - Maya_2.0.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Arts/Sprite Sheet - Maya_2.0.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Arts/sprite sheet explosion.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Arts/sprite sheet explosion.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Arts/sprite sheet.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Arts/sprite sheet.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Arts/spritesheet companion.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Arts/spritesheet companion.png.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefab/BasicEnemy .prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/BasicEnemy .prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Big Enemy.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Big Enemy.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefab/Bullet.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Bullet.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Char Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Char Player.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/LargeEnemy.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/LargeEnemy.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/SmallEnemy.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/SmallEnemy.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Gameplay.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Gameplay.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Behaviour_Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Behaviour_Player.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BoosGun.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BigEnemyGun.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BoosGun.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BigEnemyGun.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BossOneMove.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BossOneMove.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BigEnemy.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemies/AEnemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemies/AEnemy.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemies/BasicEnemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemies/BasicEnemy.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemies/BasicEnemyBullet.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemies/BasicEnemyBullet.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemies/OnBecomeInvisibleSignal.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemies/OnBecomeInvisibleSignal.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemies/VisibleInvisibleSignals.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemies/SmallEnemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemies/SmallEnemy.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemies/Spawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemies/Spawner.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BigEnemyGun.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BigEnemyGun.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BossTwoMove.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BossTwoMove.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,13 +54,17 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/SmallEnemy.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/AEnemy.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/BigEnemyGun.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/BossOneMove.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/BigEnemy.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/Spawner.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/OnBecomeInvisibleSignal.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/VisibleInvisibleSignals.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/UI/InverseMask.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/UI/CutoutMask.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/UI/CutoutMaskUi.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/BasicEnemy.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/BossTwoMove.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/BigEnemyGun.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Behaviour_Player.cs" />
     </changedPaths>
   </component>
@@ -138,7 +121,8 @@
       <workItem from="1620837134645" duration="2034000" />
       <workItem from="1621887757359" duration="1222000" />
       <workItem from="1622839779571" duration="1603000" />
-      <workItem from="1622841582235" duration="3596000" />
+      <workItem from="1622841582235" duration="7809000" />
+      <workItem from="1623288182534" duration="178000" />
     </task>
     <servers />
   </component>
