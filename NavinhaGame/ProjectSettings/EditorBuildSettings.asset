@@ -10,7 +10,7 @@ EditorBuildSettings:
     guid: 05019c27c56103e4ebe6bb1664ffede0
   - enabled: 1
     path: Assets/Scenes/Gameplay.unity
-    guid: f97fa5b0c8303ba4fa13c889e8b8ffd1
+    guid: 2ad865da7595acf4592f2898d51fc380
   - enabled: 1
     path: Assets/Scenes/FadeInOutScene.unity
     guid: 9f6c2c47d4cba14479b25f0c40cfcbd3

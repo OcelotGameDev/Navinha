@@ -43,6 +43,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be764f06dc93fe74a83b147367ccbe88, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentBullet: BossBullet
+  currentBullet: BossBullets
   refe: {fileID: 3320665753995144604, guid: 5ca810a0cc44e0a479fbde00c53f9f4e, type: 3}
   cadenceTime: 1
