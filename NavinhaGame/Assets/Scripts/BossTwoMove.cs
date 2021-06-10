@@ -1,5 +1,7 @@
+using System;
 using System.Collections;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class BossTwoMove : MonoBehaviour, IHittable
 {
@@ -11,7 +13,7 @@ public class BossTwoMove : MonoBehaviour, IHittable
 
     public float angle;
     int arrayIndex;
-
+    
     Rigidbody2D rbody;
     bool IsDead => currentHp <= 0;
 

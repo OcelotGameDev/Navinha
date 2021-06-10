@@ -1,30 +1,30 @@
-using System;
 using System.Collections;
 using UnityEngine;
 
-public class BigEnemyGun : MonoBehaviour
+public class BossGun : MonoBehaviour
 {
     public string currentBullet;
     public BossBullets refe;
     Transform trfr;
     public float cadenceTime;
-    private bool _canShoot = false;
+    private bool _canShoot = true;
+    
+    private Coroutine _cadenceCoroutine; 
 
-    void Start()
+    void Awake()
     {
         trfr = GetComponent<Transform>();
         refe.gun = trfr.transform;
-        StartCoroutine(Cadence());
     }
 
     private void OnEnable()
     {
-        _canShoot = false;
+        _cadenceCoroutine = StartCoroutine(Cadence());
     }
 
-    public void EnableShooting()
+    private void OnDisable()
     {
-        _canShoot = true;
+        StopCoroutine(_cadenceCoroutine);
     }
 
     private void Die()
@@ -54,7 +54,7 @@ public class BigEnemyGun : MonoBehaviour
         {
             yield return new WaitForSeconds(cadenceTime);
             if (!_canShoot) continue;
-
+            
             Spawner();
             if (!this.gameObject.activeInHierarchy) yield break;
         }

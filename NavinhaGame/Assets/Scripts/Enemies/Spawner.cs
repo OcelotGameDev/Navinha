@@ -37,8 +37,6 @@ public class Spawner : MonoBehaviour
             _timer = _timeBetweenSpawns;
             SpawnEnemy(_enemyToSpawn[Random.Range(0,_enemyToSpawn.Length)]);
         }
-        
-        Debug.Log(_currentSpawnedEnemies.Count);
     }
 
     private void SpawnEnemy(string enemyTag)

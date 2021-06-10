@@ -5,13 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1cc1d91b-c635-45bb-bd14-a11d2b45e00b" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/BossGun.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/BossGun.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.NavinhaGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.NavinhaGame/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefab/BasicEnemy .prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/BasicEnemy .prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Bullet.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Bullet.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Boss.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Boss.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Gameplay.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Gameplay.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Behaviour_Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Behaviour_Player.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Gameplay/Global Volume Profile.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Gameplay/Global Volume Profile.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/BigEnemyGun.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BigEnemyGun.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/BossTwoMove.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BossTwoMove.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemies/Spawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemies/Spawner.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,16 +58,17 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/AEnemy.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/BossOneMove.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/BigEnemy.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/Spawner.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/OnBecomeInvisibleSignal.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/VisibleInvisibleSignals.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/UI/InverseMask.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/UI/CutoutMask.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/UI/CutoutMaskUi.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/BasicEnemy.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/BossTwoMove.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/BigEnemyGun.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Behaviour_Player.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/Spawner.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/BigEnemyGun.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/BossTwoMove.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/BossGun.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1sMfC8ezM1GDJgkXlIqtOMkTHcQ" />
@@ -122,6 +126,7 @@
       <workItem from="1622839779571" duration="1603000" />
       <workItem from="1622841582235" duration="7809000" />
       <workItem from="1623288182534" duration="178000" />
+      <workItem from="1623289307775" duration="1605000" />
     </task>
     <servers />
   </component>
