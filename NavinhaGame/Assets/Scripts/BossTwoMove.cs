@@ -11,7 +11,7 @@ public class BossTwoMove : MonoBehaviour, IHittable
     public Transform[] arrayPos;
     public Transform child;
     public float lerpSpeed, cadenceTimeHigh, cadenceTimeLower, currentHp, maxHp;
-
+    public GameObject vfx;
 
     public float angle;
     int arrayIndex;
@@ -38,6 +38,7 @@ public class BossTwoMove : MonoBehaviour, IHittable
 
     private void Die()
     {
+        Instantiate(vfx, this.transform.position, Quaternion.identity);
         this.gameObject.SetActive(false);
     }
 

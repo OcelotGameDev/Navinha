@@ -19,6 +19,7 @@ public class Behaviour_Player : MonoBehaviour, IHittable
     [Header("Life Settings")]
     public int maxHp;
     public int currentHp;
+    public GameObject explosionFx;
     private bool IsDead => currentHp <= 0;
     
     [Header("Shooting Settings")]
@@ -119,6 +120,7 @@ public class Behaviour_Player : MonoBehaviour, IHittable
 
     private void Die()
     {
+        Instantiate(explosionFx, this.transform.position, Quaternion.identity);
         this.gameObject.SetActive(false);
     }
 

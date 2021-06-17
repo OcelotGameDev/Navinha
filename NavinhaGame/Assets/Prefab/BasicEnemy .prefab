@@ -52,6 +52,7 @@ MonoBehaviour:
   invisibleSignals: {fileID: 8529312335176841300}
   _moveSpeed: 1.5
   _timeBetweenShots: 1
+  vfx: {fileID: 6404536046685777925, guid: 37ea16bf633facc439ac2d31975fa98f, type: 3}
   _gunpoint: {fileID: 2728637931543621106}
 --- !u!50 &2659576121099143045
 Rigidbody2D:

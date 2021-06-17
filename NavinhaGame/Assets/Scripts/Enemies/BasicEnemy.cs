@@ -7,6 +7,7 @@ public class BasicEnemy : AEnemy
 
     [SerializeField] private float _timeBetweenShots = 1f;
     private float _timer;
+    public GameObject vfx;
 
     private bool _canShoot = false;
     
@@ -33,8 +34,8 @@ public class BasicEnemy : AEnemy
 
     protected override void OnDisable()
     {
+        Instantiate(vfx, this.transform.position, Quaternion.identity);
         base.OnDisable();
-        
         _invisibleSignals.OnBecameInvisibleSignal -= Despawn;
         _invisibleSignals.OnBecameVisibleSignal -= EnableShooting;
     }

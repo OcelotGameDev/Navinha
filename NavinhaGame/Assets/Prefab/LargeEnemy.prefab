@@ -72,7 +72,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _maxLifePoints: 6
   _rigidbody: {fileID: 332870528913734634}
-  _invisibleSignal: {fileID: 332870529353028807}
+  invisibleSignals: {fileID: 332870529353028807}
   _moveSpeed: 1
   _shootingAngle: 45
   _timeBetweenShots: 1

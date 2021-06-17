@@ -4,6 +4,7 @@ using UnityEngine;
 public class BigEnemy : AEnemy
 {
     public float currentHp, maxHp, speed;
+    public GameObject vfx;
     private Rigidbody2D rbody;
     private bool IsDead => currentHp <= 0;
 
@@ -31,6 +32,7 @@ public class BigEnemy : AEnemy
 
     private void Die()
     {
+        Instantiate(vfx, this.transform.position, Quaternion.identity);
         this.Despawn();
     }
 

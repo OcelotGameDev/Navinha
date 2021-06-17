@@ -76,6 +76,7 @@ MonoBehaviour:
   currentHp: 10
   maxHp: 6
   speed: 0.5
+  vfx: {fileID: 6404536046685777925, guid: 37ea16bf633facc439ac2d31975fa98f, type: 3}
   _guns: []
 --- !u!58 &3399806713883063318
 CircleCollider2D:

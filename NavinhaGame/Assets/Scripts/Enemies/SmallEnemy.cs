@@ -14,6 +14,7 @@ public class SmallEnemy : AEnemy
     [SerializeField] private float _timeToWait = 5f;
 
     private static GameObject _player = null;
+    public GameObject vfx;
 
     private bool _lookAt = false;
     private bool _shoot = false;
@@ -46,6 +47,7 @@ public class SmallEnemy : AEnemy
 
     protected override void OnDisable()
     {
+        Instantiate(vfx, this.transform.position, Quaternion.identity);
         base.OnDisable();
         _invisibleSignals.OnBecameInvisibleSignal -= Despawn;
     }
