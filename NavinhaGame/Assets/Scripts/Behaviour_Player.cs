@@ -8,8 +8,8 @@ public class Behaviour_Player : MonoBehaviour, IHittable
     Animator anim;
     
     [Header("CompanionSettings")]
-    [Range(0.0f, 1.0f)]
-    public float offSetPosY;
+    //[Range(0.0f, 1.0f)]
+    //public float angle;
     public GameObject companionObj;
 
     [Header("Floats da cadencia de tiro")] 
@@ -64,10 +64,12 @@ public class Behaviour_Player : MonoBehaviour, IHittable
         }
     }
 
-    void CompanionOffset()
+    /*void CompanionOffset()
     {
         //companionObj.transform.position = new Vector2(companionObj.transform.position.x, this.transform.position.y*offSetPosY);
-    }
+        //transform.RotateAround(target.transform.position, Vector3.up, 20 * Time.deltaTime); abaixo
+        companionObj.transform.RotateAround(companionObj.transform.position, Vector3.forward, angle * Time.deltaTime);
+    }*/
 
     void ShootBullet()
     {
@@ -139,6 +141,5 @@ public class Behaviour_Player : MonoBehaviour, IHittable
     {
         MoveAnimate();
         ShootBullet();
-        CompanionOffset();
     }
 }

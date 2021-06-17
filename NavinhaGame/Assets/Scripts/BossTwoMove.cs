@@ -9,7 +9,9 @@ public class BossTwoMove : MonoBehaviour, IHittable
     Vector2 dir;
 
     public Transform[] arrayPos;
+    public Transform child;
     public float lerpSpeed, cadenceTimeHigh, cadenceTimeLower, currentHp, maxHp;
+
 
     public float angle;
     int arrayIndex;
@@ -65,7 +67,6 @@ public class BossTwoMove : MonoBehaviour, IHittable
         angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
         transform.rotation = Quaternion.Euler(0f,0f,angle);*/
         transform.position = Vector2.Lerp(transform.position, nextPos, lerpSpeed * Time.deltaTime);
-        transform.Rotate(new Vector3(transform.rotation.x, transform.rotation.y, angle)*Time.deltaTime);
-
+        child.transform.Rotate(new Vector3(transform.rotation.x, transform.rotation.y, angle)*Time.deltaTime);
     }
 }
