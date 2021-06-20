@@ -44,9 +44,9 @@ public class GameManager : MonoBehaviour
         _stateMachine.AddTransition(play, loading, () => LoadLevel.LevelToLoad != null);
         _stateMachine.AddTransition(loading, play, loading.Finish);
 
-        // _stateMachine.AddTransition(play, pause, () => RewiredPlayerInput.Instance.PausePressed);
-        // _stateMachine.AddTransition(pause, play, () => RewiredPlayerInput.Instance.PausePressed);
-        // _stateMachine.AddTransition(pause, play, () => PauseButton.Pressed);
+        _stateMachine.AddTransition(play, pause, () => Input.GetButtonDown("Pause"));
+        _stateMachine.AddTransition(pause, play, () => Input.GetButtonDown("Pause"));
+        _stateMachine.AddTransition(pause, play, () => PauseButton.Pressed);
 
         _stateMachine.AddTransition(pause, menu, () => RestartButton.Pressed);
 

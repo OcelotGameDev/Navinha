@@ -1,5 +1,3 @@
-﻿
-public class QuitButton : AbstractButton<QuitButton>
+﻿public class QuitButton : AbstractButton<QuitButton>
 {
-    
 }
