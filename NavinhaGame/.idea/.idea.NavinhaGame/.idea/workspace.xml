@@ -5,41 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1cc1d91b-c635-45bb-bd14-a11d2b45e00b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/InputManager.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/InputManager.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.NavinhaGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.NavinhaGame/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Arts/Menu Inicial/Iniciar.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Arts/Menu Inicial/Iniciar.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Arts/Menu Inicial/Layer 43 copy 3.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Arts/Menu Inicial/Layer 43 copy 3.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Arts/Menu Inicial/Layer 43 copy 4.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Arts/Menu Inicial/Layer 43 copy 4.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Arts/Menu Inicial/Layer 43 copy.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Arts/Menu Inicial/Layer 43 copy.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Arts/Menu Inicial/Layer 43.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Arts/Menu Inicial/Layer 43.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Arts/Menu Inicial/Layer 50 copy.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Arts/Menu Inicial/Layer 50 copy.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Arts/Menu Inicial/Opcoes.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Arts/Menu Inicial/Opcoes.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Arts/Menu Inicial/Sair.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Arts/Menu Inicial/Sair.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Arts/Menu Inicial/logotipo wespen.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Arts/Menu Inicial/logotipo wespen.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/Resources/FMODStudioSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/Resources/FMODStudioSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/src/Runtime/Timeline/FMODEventPlayable.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/src/Runtime/Timeline/FMODEventPlayable.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/BasicEnemy .prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/BasicEnemy .prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Big Enemy.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Big Enemy.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Bullet.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Bullet.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/SmallEnemy.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/SmallEnemy.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/DOTweenSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/DOTweenSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Gameplay.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Gameplay.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Gameplay/Global Volume Profile.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Gameplay/Global Volume Profile.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Gameplay2.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Gameplay2.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Menu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Menu.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/PauseButton.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/PauseButton.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/PausePanel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/PausePanel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/QuitButton.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/QuitButton.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/TMP Settings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/TMP Settings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/InputManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/InputManager.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TimelineSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TimelineSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/URPProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/URPProjectSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/VFXManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/VFXManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Fonts/PressStart2P-Regular SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Fonts/PressStart2P-Regular SDF.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,6 +30,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemies/LargeEnemy.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/SetOuteScreenColor.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemies/SmallEnemy.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/SliderButton.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/CutoutMaskUi.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
@@ -99,6 +67,7 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/UI/PausePanel.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/SetOuteScreenColor.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/SliderButton.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1sMfC8ezM1GDJgkXlIqtOMkTHcQ" />
