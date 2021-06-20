@@ -4,35 +4,35 @@ using UnityEngine;
 
 public class SliderButton : MonoBehaviour
 {
-    [SerializeField] private float _volumeIncrement = 10;
+    [SerializeField] private float _intitialValue = 50;
+    [SerializeField] private float _increment = 10;
     [SerializeField] private TextMeshProUGUI _text;
-    private float _volume = 50;
 
-    private void OnEnable()
+    public Action<float> OnValueUpdate;
+
+    public void SetValue(float newValue)
     {
-        if (PlayerPrefs.HasKey("volume"))
-        {
-            _volume = PlayerPrefs.GetFloat("volume");
-        }
+        _intitialValue = newValue;
+        UpdateText();
     }
-
+    
     public void UpButton()
     {
-        _volume += _volumeIncrement;
-        if (_volume > 100) _volume = 100f;
+        _intitialValue += _increment;
+        if (_intitialValue > 100) _intitialValue = 100f;
         UpdateText();
     }
 
     public void DownButton()
     {
-        _volume -= _volumeIncrement;
-        if (_volume < 0) _volume = 0f;
+        _intitialValue -= _increment;
+        if (_intitialValue < 0) _intitialValue = 0f;
         UpdateText();
     }
 
     public void UpdateText()
     {
-        _text.text = ((int) _volume).ToString();
+        _text.text = ((int) _intitialValue).ToString();
     }
 
     private void OnValidate()

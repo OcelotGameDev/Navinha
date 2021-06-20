@@ -158,10 +158,10 @@ RectTransform:
   m_Father: {fileID: 1216329791}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.2}
-  m_AnchorMax: {x: 1, y: 0.8}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0.5, y: 0.3}
+  m_AnchorMax: {x: 0.8647478, y: 0.70446867}
+  m_AnchoredPosition: {x: 0.029182434, y: -0.2586918}
+  m_SizeDelta: {x: 0.058352947, y: -0.5173969}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &235580801
 MonoBehaviour:
@@ -285,7 +285,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 40.55
+  m_fontSize: 24.95
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -560,7 +560,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.0000076293945, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1065888073
@@ -737,10 +737,10 @@ RectTransform:
   m_Father: {fileID: 1101702769}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -108.55, y: 16.5}
-  m_SizeDelta: {x: 422.9, y: 100}
+  m_AnchorMin: {x: 0.040000003, y: 0.40127504}
+  m_AnchorMax: {x: 0.60038114, y: 0.6951717}
+  m_AnchoredPosition: {x: -0.11114502, y: -0.034626007}
+  m_SizeDelta: {x: -1.1946113, y: -1.0668681}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1216329792
 MonoBehaviour:
@@ -754,7 +754,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b063fd26a62e1047a62e155973e8df2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _volumeIncrement: 10
+  _intitialValue: 50
+  _increment: 10
   _text: {fileID: 617716621}
 --- !u!1 &1229599413
 GameObject:
@@ -974,7 +975,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 28.9
+  m_fontSize: 24.25
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
