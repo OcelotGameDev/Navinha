@@ -12,7 +12,7 @@ public class SliderButton : MonoBehaviour
     {
         if (PlayerPrefs.HasKey("volume"))
         {
-            _volume = 
+            _volume = PlayerPrefs.GetFloat("volume");
         }
     }
 
