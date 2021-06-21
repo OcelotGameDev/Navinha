@@ -1,6 +1,4 @@
-using System;
 using System.Collections.Generic;
-using System.ComponentModel.Design;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -19,18 +17,24 @@ public class Spawner : MonoBehaviour
 
     [SerializeField]private List<GameObject> _currentSpawnedEnemies = new List<GameObject>();
 
+    private bool _canSpawn = true;
+
     private void OnEnable()
     {
         AEnemy.OnDespawn += ListenOnDespawn;
+        GameManager.OnGameStateChanged += ListenOnStateChanged;
     }
-
+    
     private void OnDisable()
     {
         AEnemy.OnDespawn -= ListenOnDespawn;
+        GameManager.OnGameStateChanged -= ListenOnStateChanged;
     }
 
     private void Update()
     {
+        if (!_canSpawn) return;
+        
         _timer -= Time.deltaTime;
         if (_timer <= 0)
         {
@@ -52,6 +56,16 @@ public class Spawner : MonoBehaviour
         if (_currentSpawnedEnemies.Contains(enemyObj))
         {
             _currentSpawnedEnemies.Remove(enemyObj);
+        }
+    }
+    
+    private void ListenOnStateChanged(IState state)
+    {
+        _canSpawn = state is Play;
+
+        if (state is LoadLevel || state is Menu)
+        {
+            PoolingSystem.Instance.DespawnEveryone();
         }
     }
 

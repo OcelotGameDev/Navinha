@@ -43,7 +43,7 @@ public class StateMachine
 
         LastState = CurrentState;
         CurrentState = state;
-        //Debug.Log($"Change to {state}");
+        //UnityEngine.Debug.Log($"Change to {state}");
         CurrentState.OnEnter();
 
         OnStateChanged?.Invoke(CurrentState);

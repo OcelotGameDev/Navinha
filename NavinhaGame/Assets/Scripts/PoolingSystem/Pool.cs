@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
+using System.Linq;
 
 public class Pool
 {
@@ -45,6 +46,14 @@ public class Pool
             var obj = CreateObject();
             obj.SetActive(false);
             _pool.Enqueue(obj);
+        }
+    }
+
+    public void DespawnEveryone()
+    {
+        foreach (var obj in _pool.Where(o => o.activeInHierarchy))
+        {
+            obj.SetActive(false);
         }
     }
 }

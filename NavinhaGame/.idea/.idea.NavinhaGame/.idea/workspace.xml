@@ -5,10 +5,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1cc1d91b-c635-45bb-bd14-a11d2b45e00b" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/BackFromOptionsButton.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/BackFromOptionsButton.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/TestButton.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/TestButton.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.NavinhaGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.NavinhaGame/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Gameplay.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Gameplay.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Menu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Menu.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/OptionsMenu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/OptionsMenu.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SliderButton.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SliderButton.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemies/Spawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemies/Spawner.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PoolingSystem/Pool.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PoolingSystem/Pool.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PoolingSystem/PoolingSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PoolingSystem/PoolingSystem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/StateMachine/StateMachine.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/StateMachine/StateMachine.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/AbstractButton.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/AbstractButton.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/OptionsButton.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/OptionsButton.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/OptionsPanel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/OptionsPanel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,7 +55,6 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/BasicEnemyBullet.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/FadeInOutSceneTransition.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Bootstrapper.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/UI/OptionsButton.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/UI/AbstractPanel.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/UI/MainMenuPanel.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/LargeEnemy.cs" />
@@ -58,7 +70,6 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/UI/CutoutMaskUi.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/BasicEnemy.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Behaviour_Player.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/Spawner.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/BigEnemyGun.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/BossTwoMove.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/BossGun.cs" />
@@ -66,10 +77,16 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/UI/QuitButton.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/UI/PauseButton.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/UI/PausePanel.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/SetOuteScreenColor.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/SliderButton.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/UI/AbstractButton.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/UI/OptionsPanel.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/StateMachine/StateMachine.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/UI/OptionsButton.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/PoolingSystem/Pool.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/PoolingSystem/PoolingSystem.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/Spawner.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1sMfC8ezM1GDJgkXlIqtOMkTHcQ" />
@@ -138,7 +155,7 @@
       <workItem from="1623289307775" duration="1605000" />
       <workItem from="1624137615462" duration="3669000" />
       <workItem from="1624225011300" duration="513000" />
-      <workItem from="1624225554471" duration="1236000" />
+      <workItem from="1624225554471" duration="12562000" />
     </task>
     <servers />
   </component>

@@ -14,5 +14,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/FadeInOutScene.unity
     guid: 9f6c2c47d4cba14479b25f0c40cfcbd3
+  - enabled: 1
+    path: Assets/Scenes/OptionsMenu.unity
+    guid: f0cb7ec1a3b1e244b882e45980ad9e2f
   m_configObjects:
     com.unity.addressableassets: {fileID: 11400000, guid: 511089d3365dd0e4bbf8d8c1bada4969, type: 2}

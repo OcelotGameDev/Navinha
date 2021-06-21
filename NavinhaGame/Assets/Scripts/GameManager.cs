@@ -48,22 +48,22 @@ public class GameManager : MonoBehaviour
         _stateMachine.AddTransition(pause, play, () => Input.GetButtonDown("Pause"));
         _stateMachine.AddTransition(pause, play, () => PauseButton.Pressed);
 
-        _stateMachine.AddTransition(pause, menu, () => RestartButton.Pressed);
+        _stateMachine.AddTransition(pause, loading, () => LoadLevel.LevelToLoad != null);
 
-        // _stateMachine.AddTransition(pause, options, () => OptionsButton.Pressed);
-        // _stateMachine.AddTransition(options, pause,
-        //     () => OptionsButton.Pressed && _stateMachine.LastState is Pause);
-        // _stateMachine.AddTransition(options, pause,
-        //     () => RewiredPlayerInput.Instance.PausePressed && _stateMachine.LastState is Pause);
+        _stateMachine.AddTransition(pause, options, () => OptionsButton.Pressed);
+        _stateMachine.AddTransition(options, pause,
+            () => BackFromOptionsButton.Pressed && _stateMachine.LastState is Pause);
+        _stateMachine.AddTransition(options, pause,
+            () => Input.GetButtonDown("Pause") && _stateMachine.LastState is Pause);
 
         _stateMachine.AddTransition(menu, options, () => OptionsButton.Pressed);
-        _stateMachine.AddTransition(options, menu, () => OptionsButton.Pressed && _stateMachine.LastState is Menu);
-        // _stateMachine.AddTransition(options, menu,
-        //     () => RewiredPlayerInput.Instance.PausePressed && _stateMachine.LastState is Menu);
+        _stateMachine.AddTransition(options, menu, () => BackFromOptionsButton.Pressed && _stateMachine.LastState is Menu);
+        _stateMachine.AddTransition(options, menu,
+            () => Input.GetButtonDown("Pause") && _stateMachine.LastState is Menu);
 
         _stateMachine.AddTransition(menu, quit, () => QuitButton.Pressed);
         
-        // _stateMachine.AddTransition(play, win, () => WinArea.HasWon);
+        // _stateMachine.AddTransition(play, win, () => WinArea.HasWon);S
         _stateMachine.AddTransition(win, menu, () => RestartButton.Pressed);
     }
 
@@ -83,20 +83,41 @@ public class Menu : IState
 
     public void OnEnter()
     {
+        if (PoolingSystem.Instance != null)
+        {
+            PoolingSystem.Instance.DespawnEveryone();
+        }
+        
         Time.timeScale = 1f;
         LoadLevel.LevelToLoad = null;
-        
+
+        var menuAlreadyLoaded = false;
+        var optionsLoaded = false;
         // If any of the loaded scenes is the menu Scene don't load it again
         for (int i = 0; i < SceneManager.sceneCount; i++)
         {
-            if (SceneManager.GetSceneAt(i).name == "Menu")
+            var currentScene = SceneManager.GetSceneAt(i);
+            if (currentScene.name == "Menu")
             {
-                return;
+                menuAlreadyLoaded = true;
+            }
+
+            if (currentScene.name == "OptionsMenu")
+            {
+                optionsLoaded = true;
             }
         }
+
+        if (!optionsLoaded)
+        {
+            SceneManager.LoadSceneAsync("OptionsMenu", LoadSceneMode.Additive);
+        }
+        
+        if (menuAlreadyLoaded) return;
         
         // otherwise load it
         SceneManager.LoadSceneAsync("Menu");
+        SceneManager.LoadSceneAsync("OptionsMenu", LoadSceneMode.Additive);
     }
 
     public void OnExit()
@@ -156,8 +177,13 @@ public class LoadLevel : IState
     {
          FadeInOutSceneTransition.Instance.FadeIn();
 
+         if (PoolingSystem.Instance != null)
+         {
+             PoolingSystem.Instance.DespawnEveryone();
+         }
+         
          _operations.Add(SceneManager.LoadSceneAsync(LevelToLoad));
-         // _operations.Add(SceneManager.LoadSceneAsync("UI", LoadSceneMode.Additive));
+         _operations.Add(SceneManager.LoadSceneAsync("OptionsMenu", LoadSceneMode.Additive));
          // _operations.Add(SceneManager.LoadSceneAsync("MapSetup", LoadSceneMode.Additive));
 
          _operations.ForEach(t => t.allowSceneActivation = false);
@@ -182,10 +208,12 @@ public class Options : IState
 
     public void OnEnter()
     {
+        Time.timeScale = 0f;
     }
 
     public void OnExit()
     {
+        Time.timeScale = 1f;
         //SaveOptions.SaveAllOptions();
     }
 }

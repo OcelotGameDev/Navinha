@@ -1,3 +1,1 @@
-﻿public class OptionsButton : AbstractButton<OptionsButton>
-{
-}
+﻿public class OptionsButton : AbstractButton<OptionsButton> { }

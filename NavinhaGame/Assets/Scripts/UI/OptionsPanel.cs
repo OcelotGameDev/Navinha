@@ -14,8 +14,8 @@ public class OptionsPanel : AbstractPanel<Options>
     protected override void Awake()
     {
         base.Awake();
-        
-        _tween = _panel.transform.DOScale(1, 0.5f).SetAutoKill(false).SetEase(Ease.OutBack).SetUpdate(true);
+
+        _tween = _panel.transform.DOScale(1, 0.5f).SetAutoKill(false).SetEase(Ease.OutBack).SetUpdate(true).From(0);
         _tween.onRewind += () => _panel.SetActive(false);
     }
 
@@ -26,8 +26,8 @@ public class OptionsPanel : AbstractPanel<Options>
         if (state is Options)
         {
             LoadOptions();
-            _panel.SetActive(true);
             _tween.Restart();
+            _panel.SetActive(true);
         }
         else 
         {
@@ -38,7 +38,7 @@ public class OptionsPanel : AbstractPanel<Options>
             
             _tween.SmoothRewind();
         }
-
+        
         _lastState = state;
     }
 

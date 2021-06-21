@@ -1,7 +1,5 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.AddressableAssets;
 
 public class PoolingSystem : MonoBehaviour
 {
@@ -83,5 +81,13 @@ public class PoolingSystem : MonoBehaviour
         }
         
         return obj;
+    }
+
+    public void DespawnEveryone()
+    {
+        foreach (KeyValuePair<string,Pool> keyValuePair in _poolsDictionary)
+        {
+            keyValuePair.Value.DespawnEveryone();
+        }
     }
 }
