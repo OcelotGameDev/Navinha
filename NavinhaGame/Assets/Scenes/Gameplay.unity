@@ -331,7 +331,7 @@ GameObject:
   m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &102904974
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1764,7 +1764,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bossRef: {fileID: 1016549083}
-  bossStartTime: 5
+  bossStartTime: 300
   bossCurrentTime: 0
   pUpHealth: {fileID: 1636330185}
   pUpComp: {fileID: 1636188065}
