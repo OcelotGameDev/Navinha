@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 3399806713883063319}
   - component: {fileID: 3399806713883063318}
   - component: {fileID: 3399806713883063313}
+  - component: {fileID: 5036375371010547236}
   m_Layer: 6
   m_Name: Big Enemy
   m_TagString: Untagged
@@ -76,7 +77,7 @@ MonoBehaviour:
   currentHp: 10
   maxHp: 6
   speed: 0.5
-  vfx: {fileID: 6404536046685777925, guid: 37ea16bf633facc439ac2d31975fa98f, type: 3}
+  explosion: Explosions
   _guns: []
 --- !u!58 &3399806713883063318
 CircleCollider2D:
@@ -145,6 +146,29 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &5036375371010547236
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3399806713883063312}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: pBullet
+  Event: event:/Game_Sounds/Hit Longo
+  PlayEvent: 5
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 0
+  OverrideMaxDistance: 0
 --- !u!1001 &3399806712121790322
 PrefabInstance:
   m_ObjectHideFlags: 0

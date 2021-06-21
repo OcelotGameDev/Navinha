@@ -4,7 +4,7 @@ using UnityEngine;
 public class BigEnemy : AEnemy
 {
     public float currentHp, maxHp, speed;
-    public GameObject vfx;
+    public string explosion;
     private Rigidbody2D rbody;
     private bool IsDead => currentHp <= 0;
 
@@ -32,7 +32,6 @@ public class BigEnemy : AEnemy
 
     private void Die()
     {
-        Instantiate(vfx, this.transform.position, Quaternion.identity);
         this.Despawn();
     }
 
@@ -44,8 +43,19 @@ public class BigEnemy : AEnemy
         }
     }
 
+    void SpawnVFX()
+    {
+        GameObject vfx = PoolingSystem.Instance.SpawnObject(explosion);
+        if (vfx != null)
+        {
+            vfx.transform.position = this.transform.position;
+            vfx.SetActive(true);
+        }
+    }
+
     private void OnBecameInvisible()
     {
+        SpawnVFX();
         this.Despawn();
     }
 }

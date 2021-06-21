@@ -33,3 +33,7 @@ MonoBehaviour:
     Tag: BossBullet
     PrewarmQuantity: 10
     Prewarm: 1
+  - Prefab: {fileID: 3354816258691745053, guid: 9ab03c83753986049a6b7b2dd327d938, type: 3}
+    Tag: Explosions
+    PrewarmQuantity: 10
+    Prewarm: 1
