@@ -57,6 +57,7 @@ public class BossTwoMove : MonoBehaviour, IHittable
         {
             yield return new WaitForSeconds(Random.Range(cadenceTimeLower,cadenceTimeHigh));
             IncrementIndex();
+            //Debug.Log("Position");
             if (!this.gameObject.activeInHierarchy)
             {
                 yield break;

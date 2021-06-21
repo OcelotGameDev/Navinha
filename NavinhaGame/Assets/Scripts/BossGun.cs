@@ -5,14 +5,17 @@ public class BossGun : MonoBehaviour
 {
     public string currentBullet;
     public BossBullets refe;
-    Transform trfr;
-    public float cadenceTime;
+    Transform trfr, gunT;
+    Vector2 rangePosition;
+    public float cadenceTime, xMin, xMax, yMin, yMax;
     private bool _canShoot = true;
     
     private Coroutine _cadenceCoroutine; 
 
     void Awake()
     {
+        //rangePosition = new Vector2(Mathf.Clamp(rangePosition.x, xMin, xMax), Mathf.Clamp(rangePosition.y, yMin, yMax));
+        gunT = transform;
         trfr = GetComponent<Transform>();
         refe.gun = trfr.transform;
     }
@@ -48,14 +51,21 @@ public class BossGun : MonoBehaviour
 
     }
 
+    void ClampShoot()
+    {
+        if (((gunT.position.x > xMin && gunT.position.x < xMax) && (gunT.position.y > yMin && gunT.position.y < yMax)))
+        {
+            Spawner();
+        }
+    }
+
     private IEnumerator Cadence()
     {
         while (true)
         {
             yield return new WaitForSeconds(cadenceTime);
             if (!_canShoot) continue;
-            
-            Spawner();
+            ClampShoot();
             if (!this.gameObject.activeInHierarchy) yield break;
         }
     }
