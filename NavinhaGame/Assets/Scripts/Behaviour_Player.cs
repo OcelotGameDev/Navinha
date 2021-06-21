@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class Behaviour_Player : MonoBehaviour, IHittable
@@ -27,6 +28,8 @@ public class Behaviour_Player : MonoBehaviour, IHittable
     public bool shooting;
 
     [SerializeField] FMOD.Studio.EventInstance fmodShot, fmodHit;
+
+    public static Action OnDie;
     
     void Awake()
     {
@@ -123,6 +126,7 @@ public class Behaviour_Player : MonoBehaviour, IHittable
     private void Die()
     {
         SpawnVFX();
+        OnDie?.Invoke();
         this.gameObject.SetActive(false);
     }
 

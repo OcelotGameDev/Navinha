@@ -71,7 +71,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec8995d501d3de440ac856652e46d3be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _maxLifePoints: 3
+  _maxLifePoints: 6
   _rigidbody: {fileID: 3399806713883063316}
   invisibleSignals: {fileID: 0}
   currentHp: 10

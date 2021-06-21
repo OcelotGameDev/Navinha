@@ -13,7 +13,7 @@ public abstract class AbstractPanel<T> : MonoBehaviour where T : IState
         GameManager.OnGameStateChanged += HandleGameStateChanged;
     }
 
-    private void OnDestroy()
+    protected virtual void OnDestroy()
     {
         GameManager.OnGameStateChanged -= HandleGameStateChanged;
     }
@@ -23,7 +23,7 @@ public abstract class AbstractPanel<T> : MonoBehaviour where T : IState
         _panel.SetActive(state is T);
     }
 
-    private void OnValidate()
+    protected virtual void OnValidate()
     {
         if (!_panel) _panel = this.GetComponentInChildren<Image>()?.gameObject;
     }

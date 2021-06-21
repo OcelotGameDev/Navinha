@@ -19,6 +19,8 @@ public class BossTwoMove : MonoBehaviour, IHittable
     Rigidbody2D rbody;
     bool IsDead => currentHp <= 0;
 
+    public static Action OnDie;
+
     void OnEnable()
     {
         currentHp = maxHp;
@@ -39,6 +41,7 @@ public class BossTwoMove : MonoBehaviour, IHittable
     private void Die()
     {
         Instantiate(vfx, this.transform.position, Quaternion.identity);
+        OnDie?.Invoke();
         this.gameObject.SetActive(false);
     }
 

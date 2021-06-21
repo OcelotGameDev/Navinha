@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Playables;
 using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
@@ -48,7 +49,7 @@ public class GameManager : MonoBehaviour
         _stateMachine.AddTransition(pause, play, () => Input.GetButtonDown("Pause"));
         _stateMachine.AddTransition(pause, play, () => PauseButton.Pressed);
 
-        _stateMachine.AddTransition(pause, loading, () => LoadLevel.LevelToLoad != null);
+        _stateMachine.AddTransition(pause, menu, () => RestartButton.Pressed);
 
         _stateMachine.AddTransition(pause, options, () => OptionsButton.Pressed);
         _stateMachine.AddTransition(options, pause,
@@ -61,10 +62,10 @@ public class GameManager : MonoBehaviour
         _stateMachine.AddTransition(options, menu,
             () => Input.GetButtonDown("Pause") && _stateMachine.LastState is Menu);
 
-        _stateMachine.AddTransition(menu, quit, () => QuitButton.Pressed);
-        
-        // _stateMachine.AddTransition(play, win, () => WinArea.HasWon);S
+        _stateMachine.AddTransition(play, win, () => WinObserver.GameEnded);
         _stateMachine.AddTransition(win, menu, () => RestartButton.Pressed);
+        
+        _stateMachine.AddAnyTransition(quit, () => QuitButton.Pressed);
     }
 
     private void Update()

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SliderButton : MonoBehaviour
 {
-    [SerializeField] private float _intitialValue = 50;
+    [SerializeField] private float _value = 50;
     [SerializeField] private float _increment = 10;
     [SerializeField] private TextMeshProUGUI _text;
 
@@ -12,27 +12,31 @@ public class SliderButton : MonoBehaviour
 
     public void SetValue(float newValue)
     {
-        _intitialValue = newValue;
+        _value = newValue;
         UpdateText();
     }
     
     public void UpButton()
     {
-        _intitialValue += _increment;
-        if (_intitialValue > 100) _intitialValue = 100f;
+        _value += _increment;
+        if (_value > 100) _value = 100f;
+        
+        OnValueUpdate?.Invoke(_value / 100f);
         UpdateText();
     }
 
     public void DownButton()
     {
-        _intitialValue -= _increment;
-        if (_intitialValue < 0) _intitialValue = 0f;
+        _value -= _increment;
+        if (_value < 0) _value = 0f;
+        
+        OnValueUpdate?.Invoke(_value / 100f);
         UpdateText();
     }
 
     public void UpdateText()
     {
-        _text.text = ((int) _intitialValue).ToString();
+        _text.text = ((int) _value).ToString();
     }
 
     private void OnValidate()

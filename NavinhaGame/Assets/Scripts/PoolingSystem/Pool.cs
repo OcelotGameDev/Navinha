@@ -31,7 +31,7 @@ public class Pool
 
     public GameObject GetObject()
     {
-        GameObject obj = !_pool.Peek().activeInHierarchy ? _pool.Dequeue() : CreateObject();
+        GameObject obj = !_pool.Peek().activeInHierarchy ? _pool?.Dequeue() : CreateObject();
 
         obj.SetActive(true);
         _pool.Enqueue(obj);
