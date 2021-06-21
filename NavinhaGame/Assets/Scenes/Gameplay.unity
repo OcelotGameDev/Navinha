@@ -1608,7 +1608,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &628103573
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1622,7 +1622,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bossRef: {fileID: 1016549083}
-  bossStartTime: 5
+  bossStartTime: 300
   bossCurrentTime: 0
   pUpHealth: {fileID: 1636330185}
   pUpComp: {fileID: 1636188065}
@@ -4738,6 +4738,14 @@ PrefabInstance:
       propertyPath: cadenceTime
       value: 0.2
       objectReference: {fileID: 0}
+    - target: {fileID: 7202144092711557812, guid: d7c2fda103108e144bdaf065decb1df4, type: 3}
+      propertyPath: maxHp
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 7202144092711557812, guid: d7c2fda103108e144bdaf065decb1df4, type: 3}
+      propertyPath: explosion
+      value: Explosions
+      objectReference: {fileID: 0}
     - target: {fileID: 7202144092711557813, guid: d7c2fda103108e144bdaf065decb1df4, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -4798,6 +4806,14 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8311226135140759344, guid: d7c2fda103108e144bdaf065decb1df4, type: 3}
+      propertyPath: Event
+      value: event:/Game_Sounds/Hit Curto
+      objectReference: {fileID: 0}
+    - target: {fileID: 8311226135140759344, guid: d7c2fda103108e144bdaf065decb1df4, type: 3}
+      propertyPath: PlayEvent
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d7c2fda103108e144bdaf065decb1df4, type: 3}
 --- !u!1001 &9069213210411986732
@@ -4807,6 +4823,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1869069521, guid: deaa8092c2e8a2d499b2c98d8efdd9f0, type: 3}
+      propertyPath: cadenceTime
+      value: 0.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 1839090658952562840, guid: deaa8092c2e8a2d499b2c98d8efdd9f0, type: 3}
+      propertyPath: m_Radius
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2776379431829910135, guid: deaa8092c2e8a2d499b2c98d8efdd9f0, type: 3}
+      propertyPath: cadenceTime
+      value: 0.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 6058776604020750016, guid: deaa8092c2e8a2d499b2c98d8efdd9f0, type: 3}
+      propertyPath: cadenceTime
+      value: 0.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 9069213209666626032, guid: deaa8092c2e8a2d499b2c98d8efdd9f0, type: 3}
+      propertyPath: maxHp
+      value: 30
+      objectReference: {fileID: 0}
     - target: {fileID: 9069213209666626032, guid: deaa8092c2e8a2d499b2c98d8efdd9f0, type: 3}
       propertyPath: arrayPos.Array.data[0]
       value: 
@@ -4845,7 +4881,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9069213209666626033, guid: deaa8092c2e8a2d499b2c98d8efdd9f0, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 7.37
+      value: 0.91
       objectReference: {fileID: 0}
     - target: {fileID: 9069213209666626033, guid: deaa8092c2e8a2d499b2c98d8efdd9f0, type: 3}
       propertyPath: m_LocalPosition.y
@@ -4886,6 +4922,10 @@ PrefabInstance:
     - target: {fileID: 9069213209666626039, guid: deaa8092c2e8a2d499b2c98d8efdd9f0, type: 3}
       propertyPath: m_Name
       value: Boss
+      objectReference: {fileID: 0}
+    - target: {fileID: 9069213209666626039, guid: deaa8092c2e8a2d499b2c98d8efdd9f0, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: deaa8092c2e8a2d499b2c98d8efdd9f0, type: 3}

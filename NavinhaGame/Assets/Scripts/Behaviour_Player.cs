@@ -8,8 +8,6 @@ public class Behaviour_Player : MonoBehaviour, IHittable
     Animator anim;
     
     [Header("CompanionSettings")]
-    //[Range(0.0f, 1.0f)]
-    //public float angle;
     public GameObject companionObj;
 
     [Header("Floats da cadencia de tiro")] 
@@ -19,7 +17,7 @@ public class Behaviour_Player : MonoBehaviour, IHittable
     [Header("Life Settings")]
     public int maxHp;
     public int currentHp;
-    public GameObject explosionFx;
+    public string explosion;
     private bool IsDead => currentHp <= 0;
     
     [Header("Shooting Settings")]
@@ -28,7 +26,7 @@ public class Behaviour_Player : MonoBehaviour, IHittable
     public Transform gun;
     public bool shooting;
 
-    [SerializeField] FMOD.Studio.EventInstance fmodInstance;
+    [SerializeField] FMOD.Studio.EventInstance fmodShot, fmodHit;
     
     void Awake()
     {
@@ -38,7 +36,8 @@ public class Behaviour_Player : MonoBehaviour, IHittable
     void Start()
     {
         anim = GetComponentInChildren<Animator>();
-        fmodInstance = FMODUnity.RuntimeManager.CreateInstance("event:/Game_Sounds/Shot");
+        fmodShot = FMODUnity.RuntimeManager.CreateInstance("event:/Game_Sounds/Shot (Sem Reverb)");
+        fmodHit= FMODUnity.RuntimeManager.CreateInstance("event:/Game_Sounds/Hit Curto");
     }
     
     void OnEnable()
@@ -47,7 +46,7 @@ public class Behaviour_Player : MonoBehaviour, IHittable
         timer = 0f;
     }
     
-    public void ChangeBullet(BulletType type)
+    /*public void ChangeBullet(BulletType type)
     {
         switch (type)
         {
@@ -63,13 +62,6 @@ public class Behaviour_Player : MonoBehaviour, IHittable
             default:
                 break;
         }
-    }
-
-    /*void CompanionOffset()
-    {
-        //companionObj.transform.position = new Vector2(companionObj.transform.position.x, this.transform.position.y*offSetPosY);
-        //transform.RotateAround(target.transform.position, Vector3.up, 20 * Time.deltaTime); abaixo
-        companionObj.transform.RotateAround(companionObj.transform.position, Vector3.forward, angle * Time.deltaTime);
     }*/
 
     void ShootBullet()
@@ -77,7 +69,6 @@ public class Behaviour_Player : MonoBehaviour, IHittable
         if (timer > 0f)
         {
             timer -= Time.deltaTime;
-            //shooting = false;
         }
 
         else if (Input.GetKeyDown(KeyCode.Return) || Input.GetKey(KeyCode.Return))
@@ -85,7 +76,7 @@ public class Behaviour_Player : MonoBehaviour, IHittable
             timer = shootCadence;
             Spawner();
             shooting = true;
-            fmodInstance.start();
+            fmodShot.start();
         }
         else { shooting = false; }
     }
@@ -102,6 +93,16 @@ public class Behaviour_Player : MonoBehaviour, IHittable
         }
     }
 
+    void SpawnVFX()
+    {
+        GameObject vfx = PoolingSystem.Instance.SpawnObject(explosion);
+        if (vfx != null)
+        {
+            vfx.transform.position = this.transform.position;
+            vfx.SetActive(true);
+        }
+    }
+
     void OnTriggerEnter2D(Collider2D col)
     {
         col.gameObject.GetComponent<PickUps>()?.PickUp(this);
@@ -111,16 +112,17 @@ public class Behaviour_Player : MonoBehaviour, IHittable
     {
         if (companionObj.activeInHierarchy)
         {
+            fmodHit.start();
             companionObj.SetActive(false);
         }
-        else {currentHp -= damage;}
+        else { fmodHit.start(); currentHp -= damage;}
         
         if (IsDead) Die();
     }
 
     private void Die()
     {
-        Instantiate(explosionFx, this.transform.position, Quaternion.identity);
+        SpawnVFX();
         this.gameObject.SetActive(false);
     }
 

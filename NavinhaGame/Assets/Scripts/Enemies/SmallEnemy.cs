@@ -14,7 +14,7 @@ public class SmallEnemy : AEnemy
     [SerializeField] private float _timeToWait = 5f;
 
     private static GameObject _player = null;
-    public GameObject vfx;
+    public string explosion;
 
     private bool _lookAt = false;
     private bool _shoot = false;
@@ -47,7 +47,7 @@ public class SmallEnemy : AEnemy
 
     protected override void OnDisable()
     {
-        Instantiate(vfx, this.transform.position, Quaternion.identity);
+        SpawnVFX();
         base.OnDisable();
         _invisibleSignals.OnBecameInvisibleSignal -= Despawn;
     }
@@ -78,6 +78,16 @@ public class SmallEnemy : AEnemy
         if (_shoot)
         {
             _rigidbody.velocity = this.transform.right * _shootingSpeed;
+        }
+    }
+
+    void SpawnVFX()
+    {
+        GameObject vfx = PoolingSystem.Instance.SpawnObject(explosion);
+        if (vfx != null)
+        {
+            vfx.transform.position = this.transform.position;
+            vfx.SetActive(true);
         }
     }
 }
